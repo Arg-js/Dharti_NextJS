@@ -18,6 +18,11 @@
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+    --black: 218, 17%, 35%, 1;
+    --black-foreground: 222.2 47.4% 11.2%;
+
+    --foundation-gray-B200: 218, 12%, 36%, 1;
+    --blue_gray: 218, 23%, 23%, 1;
     --light-blue: 204, 45%, 98%, 1;
 
     --muted: 210 40% 96.1%;

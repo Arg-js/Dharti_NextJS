@@ -47,7 +47,7 @@ export const Footer = () => {
             <ul className='font-medium text-gray-500 dark:text-gray-400'>
               {quickLinks.map((route) => {
                 return (
-                  <li className='my-6'>
+                  <li className='my-6' key={route.title}>
                     <Link href={route.path}>
                       <h2 className='text-sm font-semibold text-black dark:text-white'>
                         {route.title}
