@@ -23,7 +23,7 @@ export const Footer = () => {
 
   return (
     <footer className=' w-full bg-muted dark:bg-gray-900'>
-      <div className='mx-10 px-4 md:mx-20 lg:mx-40 lg:pt-8'>
+      <div className='container px-4 lg:px-8  lg:pt-8'>
         <div className='grid grid-cols-1 gap-8   md:grid-cols-4 '>
           <div className='flex flex-col gap-6'>
             <Image
