@@ -61,6 +61,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        foundation_gray_B200: {
+          DEFAULT: 'hsl(var(--foundation-gray-B200))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
