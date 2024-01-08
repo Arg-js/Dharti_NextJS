@@ -35,6 +35,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--black))',
           foreground: 'hsl(var(--black-foreground))',
         },
+        light_blue: {
+          DEFAULT: 'hsl(var(--light_blue))',
+        },
         blue_gray: {
           DEFAULT: 'hsl(var(--blue_gray))',
         },
