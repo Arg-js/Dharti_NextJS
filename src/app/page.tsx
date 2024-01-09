@@ -9,7 +9,9 @@ import { Header } from '@/components/header/Header';
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
-      <Header />
+      <div className='bg-primary_background'>
+        <Header />
+      </div>
       <About />
       <Achievements />
       <ProductLine />

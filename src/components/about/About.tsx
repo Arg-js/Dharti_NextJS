@@ -3,9 +3,10 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='container my-20 grid grid-cols-2 gap-x-32 md:mb-40'>
-      <div className='grid-item'>
-        <p className='extraBold32 mb-3'>About Dharti tech</p>
+    // todo: my-20
+    <div className='container mt-[286px] grid grid-cols-2 gap-x-[120px]'>
+      <div className='grid-item pt-[89px] '>
+        <p className='extraBold32 mb-3 '>About Dharti tech</p>
         <p className='normal16 text-foundation_gray_B200'>
           Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam
           cursus. Consequat urna pellentesque sit proin vitae molestie at a.
@@ -32,7 +33,7 @@ const About = () => {
             border: '0',
             objectFit: 'contain',
           }}
-          className='border-nextColor absolute top-20 z-10 rounded-lg border-2'
+          className='border-nextColor absolute top-[127px] z-10 rounded-lg border-2'
         />
         <Image
           width={'411'}

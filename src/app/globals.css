@@ -20,13 +20,17 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --black: 218, 17%, 35%, 1;
+
     --black-foreground: 222.2 47.4% 11.2%;
 
     --foundation-gray-B200: 218, 12%, 36%, 1;
+    --gray-900: 230, 21%, 11%, 1;
 
     --light-blue: 204, 45%, 98%, 1;
 
     --blue_gray: 218, 23%, 23%, 1;
+
+    --primary_background: 100, 31%, 94%, 1;
 
     --muted: 204, 45%, 98%, 1;
     --muted-foreground: 215.4 16.3% 46.9%;

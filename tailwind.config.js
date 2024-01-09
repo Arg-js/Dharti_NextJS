@@ -27,6 +27,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
+        primary_background: {
+          DEFAULT: 'hsl(var(--primary_background))',
+        },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
@@ -66,6 +69,9 @@ module.exports = {
         },
         foundation_gray_B200: {
           DEFAULT: 'hsl(var(--foundation-gray-B200))',
+        },
+        gray_900: {
+          DEFAULT: 'hsl(var(--gray-900))',
         },
       },
       borderRadius: {
