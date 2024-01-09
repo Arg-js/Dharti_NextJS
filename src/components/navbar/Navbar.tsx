@@ -18,7 +18,7 @@ export const Navbar = () => {
   const pathName = usePathname();
   const isActive = (path: NavPath) => pathName === path;
   return (
-    <nav className='flex items-center justify-between py-2.5'>
+    <nav className='container flex items-center justify-between py-2.5'>
       <Image src={'/logo.svg'} alt='Dharti Logo' height={70} width={100} />
 
       <ul className='flex gap-10 py-2.5'>

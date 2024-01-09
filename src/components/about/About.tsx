@@ -20,7 +20,9 @@ const About = () => {
           sapien.{' '}
         </p>
       </div>
-      <div className='grid-item relative'>
+      {/* todo: this doesnot work */}
+      {/* <div className='relative flex flex-1 justify-end'> */}
+      <div className='relative flex-1 '>
         <Image
           width={'411'}
           height={'319'}
@@ -47,7 +49,7 @@ const About = () => {
             objectFit: 'contain',
             border: '0',
           }}
-          className='border-nextColor absolute  right-20 rounded-lg border-2'
+          className='border-nextColor absolute right-20 rounded-lg border-2'
         />
       </div>
     </div>

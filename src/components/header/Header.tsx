@@ -1,10 +1,13 @@
 import React from 'react';
 import Services from '../services/Services';
+import { mapOfIndia } from '../../../public';
 
 export const Header = () => {
   return (
-    <div className='relative bg-primary_background'>
-      <div className='container top-20 grid grid-cols-2 gap-4 pb-[142px]'>
+    <div className='relative bg-primary_background '>
+      {/* todo: padding bottom to adjust the services card overflow + the required gap */}
+      {/* todo: 142(half of height of service card)+80 ie.(pb-20) = 222 */}
+      <div className='container top-20 grid grid-cols-2 items-center gap-7 pb-[222px] pt-20'>
         <div className='grid-item'>
           <div className='text-5xl font-extrabold text-gray_900'>
             <p>Transforming Finance:</p>
@@ -16,7 +19,7 @@ export const Header = () => {
           </div>
         </div>
         <div className='grid-item'>
-          <p> map of india</p>
+          <img src={mapOfIndia} />
         </div>
       </div>
       {/* todo: use flex and try */}

@@ -8,17 +8,18 @@ import { Header } from '@/components/header/Header';
 import { Navbar } from '@/components/navbar/Navbar';
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
-      <Navbar />
-      <div className='bg-primary_background'>
-        <Header />
+    // <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
+    <main>
+      <Header />
+      {/* todo: (206(64+142 ie. height of card/2)) */}
+      {/* todo: my-20 (80 + 206(64+142)) = 286 */}
+      <div className='md:mb-28 md:mt-72'>
+        <About />
       </div>
-      <About />
       <Achievements />
       <ProductLine />
       <Endorsed />
       <Testimonial />
-      <Footer />
     </main>
   );
 }

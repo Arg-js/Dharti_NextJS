@@ -1,5 +1,4 @@
 import About from '@/components/about/About';
-import { Footer } from '@/components/footer/Footer';
 import { Testimonial } from '@/components/testimonial/Testimonial';
 import React from 'react';
 import OurMission from './_components/missions/mission';
@@ -14,7 +13,6 @@ const page = () => {
       <OurMission />
       <Partners />
       <Testimonial />
-      <Footer />
     </main>
   );
 };
