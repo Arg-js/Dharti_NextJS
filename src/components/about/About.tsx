@@ -3,8 +3,8 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='container my-20 grid grid-cols-2 '>
-      <div className='grid-item '>
+    <div className='container my-20 grid grid-cols-2 gap-x-32 md:mb-40'>
+      <div className='grid-item'>
         <p className='extraBold32 mb-3'>About Dharti tech</p>
         <p className='normal16 text-foundation_gray_B200'>
           Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam
@@ -19,7 +19,7 @@ const About = () => {
           sapien.{' '}
         </p>
       </div>
-      <div className='relative'>
+      <div className='grid-item relative'>
         <Image
           width={'411'}
           height={'319'}

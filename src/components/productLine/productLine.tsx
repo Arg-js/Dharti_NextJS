@@ -2,21 +2,21 @@ import React from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
 
+const products = [
+  {
+    title: 'Purchase Bill Financing',
+    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
+  },
+  {
+    title: 'Purchase Bill Financing',
+    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
+  },
+  {
+    title: 'Purchase Bill Financing',
+    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
+  },
+];
 const ProductLine = () => {
-  const products = [
-    {
-      title: 'Purchase Bill Financing',
-      desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    },
-    {
-      title: 'Purchase Bill Financing',
-      desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    },
-    {
-      title: 'Purchase Bill Financing',
-      desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    },
-  ];
   return (
     <div className='w-full pb-14 pt-10'>
       <div className='container flex flex-col items-center py-12 md:py-2'>
@@ -27,7 +27,7 @@ const ProductLine = () => {
           Our products are more than tools; they are catalysts for growth and
           efficiency. Explore the Dharti advantage
         </p>
-        <div className='grid gap-8  pt-10 md:grid-cols-2 lg:mx-20 lg:grid-cols-3'>
+        <div className='grid gap-8  pt-10 md:grid-cols-2 lg:grid-cols-3'>
           {products.map((product, index) => {
             return (
               <Card key={index} className='text-card-foreground shadow-sm'>
@@ -45,7 +45,7 @@ const ProductLine = () => {
                 </CardHeader>
                 <CardContent>
                   <p className='pb-3 pt-5 text-lg font-bold'>{product.title}</p>
-                  <p className='pb-2 text-sm font-normal text-black'>
+                  <p className='px-4 text-sm font-normal text-black md:pb-2'>
                     {product.desc}
                   </p>
                 </CardContent>
