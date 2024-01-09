@@ -16,6 +16,8 @@
     --primary: 96, 41%, 38%, 1;
     --primary-foreground: 210 40% 98%;
 
+    --primary_background: 100, 31%, 94%, 1;
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
@@ -25,6 +27,7 @@
     --foundation-gray-B200: 218, 12%, 36%, 1;
 
     --light-blue: 204, 45%, 98%, 1;
+    --blue-background: 210, 38%, 95%, 1;
 
     --blue_gray: 218, 23%, 23%, 1;
 

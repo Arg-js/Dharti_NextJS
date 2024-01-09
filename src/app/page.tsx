@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { Footer } from '../components/footer/Footer';
 import { Testimonial } from '@/components/testimonial/Testimonial';
 import Endorsed from '@/components/endorsed/Endorsed';
