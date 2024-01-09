@@ -47,8 +47,8 @@ module.exports = {
         blue_gray: {
           DEFAULT: 'hsl(var(--blue_gray))',
         },
-        aa: {
-          500: 'blue',
+        blue_gray500: {
+          DEFAULT: 'hsl(var(--blue_gray500))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

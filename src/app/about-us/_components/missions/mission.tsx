@@ -25,7 +25,7 @@ const OurMission = () => {
             return (
               <li key={index}>
                 <div className='my-5 flex h-8 items-center space-x-3'>
-                  <div className='h-8 w-8 rounded-full bg-primary_background'></div>
+                  <div className='bg-primary_background h-8 w-8 rounded-full'></div>
                   <p className='text-sm font-medium text-black'>
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
