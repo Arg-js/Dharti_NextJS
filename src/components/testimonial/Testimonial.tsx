@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export const Testimonial = () => {
   return (
-    <div className='w-full'>
+    <div className=' w-full'>
       <div className='container flex flex-col items-center py-10 md:px-10 '>
         <p className='text-lg font-bold md:text-3xl'>{`Don't just take our words`}</p>
         <p className='texts-black pt-2 text-base font-normal text-black'>
-          3940 +Happy Dharti Users
+          3940+ Happy Dharti Users
         </p>
         <div className='mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
           {new Array(4).fill(null).map((testimony, index) => {
@@ -32,7 +32,7 @@ export const Testimonial = () => {
                     <p className='text-base font-semibold text-blue_gray'>
                       Ashesh Gurung
                     </p>
-                    <p className='text-base font-medium text-black'>
+                    <p className='text- text-blue_gray500 text-base font-medium'>
                       Developer
                     </p>
                   </div>
@@ -41,6 +41,7 @@ export const Testimonial = () => {
             );
           })}
         </div>
+        <div className='flex items-center md:py-6'>...</div>
       </div>
     </div>
   );

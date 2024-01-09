@@ -4,12 +4,12 @@ import { mapOfIndia } from '../../../public';
 
 export const Header = () => {
   return (
-    <div className='relative bg-primary_background '>
+    <div className='bg-primary_background relative '>
       {/* todo: padding bottom to adjust the services card overflow + the required gap */}
       {/* todo: 142(half of height of service card)+80 ie.(pb-20) = 222 */}
-      <div className='container top-20 grid grid-cols-2 items-center gap-7 pb-[222px] pt-20'>
-        <div className='grid-item'>
-          <div className='text-5xl font-extrabold text-gray_900'>
+      <div className='container top-20 flex items-center gap-7 pb-[222px] pt-20'>
+        <div className='flex-1'>
+          <div className='text-gray_900 text-5xl font-extrabold'>
             <p>Transforming Finance:</p>
             <p>Pioneering the Future of Seamless Supply Chains</p>
           </div>
@@ -18,7 +18,7 @@ export const Header = () => {
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
         </div>
-        <div className='grid-item'>
+        <div>
           <img src={mapOfIndia} />
         </div>
       </div>

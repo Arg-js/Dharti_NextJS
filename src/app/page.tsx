@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <Header />
       {/* todo: (206(64+142 ie. height of card/2)) */}
-      {/* todo: my-20 (80 + 206(64+142)) = 286 */}
+      {/* todo: my-20 (80 + 206(64+142)) = 286 === 288 === 72*/}
       <div className='md:mb-28 md:mt-72'>
         <About />
       </div>
