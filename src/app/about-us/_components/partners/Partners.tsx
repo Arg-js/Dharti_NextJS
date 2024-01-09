@@ -8,10 +8,10 @@ const Partners = () => {
         <h2 className='text-lg font-bold md:text-3xl'>
           Introducing Our Supporting Partner
         </h2>
-        <div className='md:flex-col-2 flex-row-1 flex w-full justify-center space-x-20'>
+        <div className='ites-center flex w-full flex-col md:flex-row md:space-x-20'>
           {new Array(8).fill(null).map((icon, index) => {
             return (
-              <div key={index} className='relative h-[60px] w-auto'>
+              <div key={index} className='relative h-[60px] w-auto text-center'>
                 {/* <Image
                   alt='company logo'
                   src={

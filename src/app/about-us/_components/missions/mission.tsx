@@ -3,7 +3,7 @@ import React from 'react';
 
 const OurMission = () => {
   return (
-    <div className='container my-20 grid grid-rows-1 gap-x-[120px] md:mb-20 md:grid-cols-2'>
+    <div className='container my-20 grid grid-rows-1 gap-x-[120px] md:mb-20 md:grid-cols-2 md:pt-20'>
       <div className='grid-item'>
         <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
           <Image

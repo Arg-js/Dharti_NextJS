@@ -4,7 +4,7 @@ import React from 'react';
 const About = () => {
   return (
     // todo: my-20
-    <div className='container mt-[286px] grid grid-rows-1 gap-x-[120px] md:grid-cols-2 '>
+    <div className='container mt-20 grid grid-rows-1 gap-x-[120px] md:grid-cols-2 '>
       <div className='grid-item pt-[89px] '>
         <p className='extraBold32 mb-3 '>About Dharti tech</p>
         <p className='normal16 text-foundation_gray_B200'>
