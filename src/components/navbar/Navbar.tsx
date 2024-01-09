@@ -24,7 +24,7 @@ export const Navbar = () => {
           <Image src={'/logo.svg'} alt='Dharti Logo' height={70} width={100} />
         </Link>
 
-        <ul className='flex gap-10 py-2.5'>
+        <ul className=' hidden gap-10 py-2.5 md:flex'>
           {NavbarItems.map((item) => (
             <li
               key={item.name}
