@@ -8,11 +8,14 @@ import About from '@/components/about/About';
 import { Header } from '@/components/header/Header';
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
-      <div className='bg-primary_background'>
-        <Header />
+    // <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
+    <main>
+      <Header />
+      {/* todo: (206(64+142 ie. height of card/2)) */}
+      {/* todo: my-20 (80 + 206(64+142)) = 286 */}
+      <div className='mt-72'>
+        <About />
       </div>
-      <About />
       <Achievements />
       <ProductLine />
       <Endorsed />

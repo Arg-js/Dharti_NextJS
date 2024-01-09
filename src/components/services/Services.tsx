@@ -4,7 +4,7 @@ import Service from './Service';
 const Services = () => {
   return (
     // todo: inherit bg color
-    <div className='container flex gap-8 bg-current bg-inherit  '>
+    <div className='container flex gap-8'>
       {new Array(4).fill(null).map((_, index) => (
         <Service
           //todo: this will be replaced by api ko till then let the key be the index

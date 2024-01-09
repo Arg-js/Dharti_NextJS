@@ -3,9 +3,8 @@ import React from 'react';
 
 const About = () => {
   return (
-    // todo: my-20
-    <div className='container mt-[286px] grid grid-cols-2 gap-x-[120px]'>
-      <div className='grid-item pt-[89px] '>
+    <div className='container my-20 flex gap-x-[120px] py-20'>
+      <div className='flex-1'>
         <p className='extraBold32 mb-3 '>About Dharti tech</p>
         <p className='normal16 text-foundation_gray_B200'>
           Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam
@@ -20,7 +19,9 @@ const About = () => {
           sapien.{' '}
         </p>
       </div>
-      <div className='grid-item relative'>
+      {/* todo: this doesnot work */}
+      {/* <div className='relative flex flex-1 justify-end'> */}
+      <div className='relative flex-1 '>
         <Image
           width={'411'}
           height={'319'}
@@ -47,7 +48,7 @@ const About = () => {
             objectFit: 'contain',
             border: '0',
           }}
-          className='border-nextColor absolute  right-20 rounded-lg border-2'
+          className='border-nextColor absolute right-20 rounded-lg border-2'
         />
       </div>
     </div>
