@@ -8,7 +8,7 @@ import HeroSection from '@/components/hero/HeroSection';
 const page = () => {
   return (
     <main className='flex min-h-screen flex-col items-center justify-center '>
-      <HeroSection title='About Us' breadcrumb='Home > About Us' />
+      <HeroSection title='About Us' breadcrumb='About Us' />
       <About />
       <OurMission />
       <Partners />

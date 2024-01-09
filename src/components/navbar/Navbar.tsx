@@ -20,7 +20,9 @@ export const Navbar = () => {
   return (
     <nav className=' sticky top-0 z-20 bg-white'>
       <div className='container   flex items-center justify-between bg-white py-2.5'>
-        <Image src={'/logo.svg'} alt='Dharti Logo' height={70} width={100} />
+        <Link href={'/'}>
+          <Image src={'/logo.svg'} alt='Dharti Logo' height={70} width={100} />
+        </Link>
 
         <ul className='flex gap-10 py-2.5'>
           {NavbarItems.map((item) => (
