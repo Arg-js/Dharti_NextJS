@@ -27,6 +27,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
+        primary_background: {
+          DEFAULT: 'hsl(var(--primary_background))',
+        },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
@@ -37,6 +40,9 @@ module.exports = {
         },
         light_blue: {
           DEFAULT: 'hsl(var(--light-blue))',
+        },
+        blue_background: {
+          DEFAULT: 'hsl(var(--blue-background))',
         },
         blue_gray: {
           DEFAULT: 'hsl(var(--blue_gray))',
@@ -66,6 +72,9 @@ module.exports = {
         },
         foundation_gray_B200: {
           DEFAULT: 'hsl(var(--foundation-gray-B200))',
+        },
+        gray_900: {
+          DEFAULT: 'hsl(var(--gray-900))',
         },
       },
       borderRadius: {
