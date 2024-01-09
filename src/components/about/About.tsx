@@ -3,9 +3,10 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='container my-20 grid grid-cols-2 '>
-      <div className='grid-item '>
-        <p className='extraBold32 mb-3'>About Dharti tech</p>
+    // todo: my-20
+    <div className='container mt-20 grid grid-rows-1 gap-x-[120px] md:grid-cols-2 '>
+      <div className='grid-item pt-[89px] '>
+        <p className='extraBold32 mb-3 '>About Dharti tech</p>
         <p className='normal16 text-foundation_gray_B200'>
           Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam
           cursus. Consequat urna pellentesque sit proin vitae molestie at a.
@@ -19,7 +20,9 @@ const About = () => {
           sapien.{' '}
         </p>
       </div>
-      <div className='relative'>
+      {/* todo: this doesnot work */}
+      {/* <div className='relative flex flex-1 justify-end'> */}
+      <div className='relative flex-1 '>
         <Image
           width={'411'}
           height={'319'}
@@ -32,7 +35,7 @@ const About = () => {
             border: '0',
             objectFit: 'contain',
           }}
-          className='border-nextColor absolute top-20 z-10 rounded-lg border-2'
+          className='border-nextColor absolute top-[127px] z-10 rounded-lg border-2'
         />
         <Image
           width={'411'}
@@ -46,7 +49,7 @@ const About = () => {
             objectFit: 'contain',
             border: '0',
           }}
-          className='border-nextColor absolute  right-20 rounded-lg border-2'
+          className='border-nextColor absolute right-20 rounded-lg border-2'
         />
       </div>
     </div>
