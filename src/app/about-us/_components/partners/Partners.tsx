@@ -1,3 +1,4 @@
+import { endorsementIcons } from '@/components/endorsed/Endorsed';
 import Image from 'next/image';
 import React from 'react';
 
@@ -8,19 +9,19 @@ const Partners = () => {
         <h2 className='text-lg font-bold md:text-3xl'>
           Introducing Our Supporting Partner
         </h2>
-        <div className='flex w-full flex-col items-center md:flex-row md:space-x-20'>
-          {new Array(8).fill(null).map((icon, index) => {
+        {/* <div className='flex w-full flex-col items-center md:flex-row md:space-x-20'> */}
+        <div className='flex justify-center gap-20'>
+          {endorsementIcons.map(({ image, id }) => {
             return (
-              <div key={index} className='relative h-[60px] w-auto text-center'>
-                {/* <Image
-                  alt='company logo'
-                  src={
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp6obmInotdZN7b6w9BNWiTOxxzRu_XEIAAkP3eRyQUWsSxP01GcvFL5Cov_uHFKT9KKc&usqp=CAU'
-                  }
-                  fill
-                /> */}
-                LogoLgogo
-              </div>
+              // <div key={id} className='relative h-[60px] w-auto text-center'>
+              <Image
+                key={id}
+                alt='company logo'
+                src={image}
+                // fill
+                // className='h-[10px]'
+              />
+              // </div>
             );
           })}
         </div>

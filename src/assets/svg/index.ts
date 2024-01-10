@@ -13,6 +13,8 @@ import heroSectionAboutBg from './heroSectionAboutBg.svg';
 import heroSectionBlogBg from './heroSectionBlogBg.svg';
 import partnerIcon1 from './partner1.svg';
 import partnerIcon2 from './partner2.svg';
+import starIcon from './star.svg';
+import testimonialImage from './testimonialImage.svg';
 
 export {
   dhartiLogoIcon,
@@ -30,4 +32,6 @@ export {
   heroSectionBlogBg,
   partnerIcon1,
   partnerIcon2,
+  starIcon,
+  testimonialImage,
 };

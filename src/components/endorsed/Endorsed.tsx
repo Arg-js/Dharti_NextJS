@@ -7,6 +7,8 @@ import {
   endorsementIcon4,
   endorsementIcon5,
   endorsementIcon6,
+  partnerIcon1,
+  partnerIcon2,
 } from '@/assets/svg';
 import Image from 'next/image';
 
@@ -23,7 +25,10 @@ const endorsementIconGrp2 = [
 // todo: move this to constant file
 export const endorsementIcons = [
   ...endorsementIconGrp1,
+  // todo: this image is creating error
+  // partnerIcon1,
   ...endorsementIconGrp2,
+  // partnerIcon2,
 ];
 
 const Endorsed = () => {
