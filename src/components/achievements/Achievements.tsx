@@ -12,6 +12,7 @@ const Achievements = () => {
       }
     >
       <div className='grid grid-cols-2 md:pl-16'>
+        {/* todo: the flex box is being repeated */}
         <div className='flex flex-col items-center border-b-2 border-r-2 p-4'>
           <p className='pb-2 text-4xl font-extrabold'>110+</p>
           <p className='text-base font-semibold'>Farmer</p>
