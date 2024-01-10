@@ -96,6 +96,10 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      // todo: check if instead of providing path here we can provide a constant
+      // backgroundImage: {
+      //   'hero-section-about': "url('./src/assets/svg/heroSectionAboutBg.svg')",
+      // },
     },
   },
   plugins: [require('tailwindcss-animate')],
