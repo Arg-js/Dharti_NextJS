@@ -15,6 +15,9 @@ import partnerIcon1 from './partner1.svg';
 import partnerIcon2 from './partner2.svg';
 import starIcon from './star.svg';
 import testimonialImage from './testimonialImage.svg';
+import missionImage from './mission.svg';
+import aboutImage1 from './about1.svg';
+import aboutImage2 from './about2.svg';
 
 export {
   dhartiLogoIcon,
@@ -34,4 +37,7 @@ export {
   partnerIcon2,
   starIcon,
   testimonialImage,
+  missionImage,
+  aboutImage1,
+  aboutImage2,
 };
