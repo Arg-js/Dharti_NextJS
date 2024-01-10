@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { dhartiLogoIcon } from '@/assets/svg';
 
 type NavPath = (typeof NavbarItems)[number]['path'];
 
@@ -21,7 +22,12 @@ export const Navbar = () => {
     <nav className=' sticky top-0 z-20 bg-white'>
       <div className='container   flex items-center justify-between bg-white py-2.5'>
         <Link href={'/'}>
-          <Image src={'/logo.svg'} alt='Dharti Logo' height={70} width={100} />
+          <Image
+            src={dhartiLogoIcon}
+            alt='Dharti Logo'
+            height={70}
+            width={100}
+          />
         </Link>
 
         <ul className=' hidden gap-10 py-2.5 md:flex'>
