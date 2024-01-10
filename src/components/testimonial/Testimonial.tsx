@@ -51,6 +51,7 @@ export const Testimonial = () => {
               return (
                 <Card key={id}>
                   <CardHeader>
+                    {/* todo: ask */}
                     <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
                       <Image
                         src={image}
@@ -74,7 +75,7 @@ export const Testimonial = () => {
                       <p className='text-base font-semibold text-blue_gray'>
                         {name}
                       </p>
-                      <p className='text- text-base font-medium text-blue_gray500'>
+                      <p className='text-base font-medium text-blue_gray500'>
                         {designation}
                       </p>
                     </div>
