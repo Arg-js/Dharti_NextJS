@@ -22,7 +22,7 @@ const About = () => {
           {aboutDharti.details}{' '}
         </p>
       </div>
-      {/* todo: this doesnot work */}
+      {/* todo: this does not work */}
       {/* <div className='relative flex flex-1 justify-end'> */}
       <div className='m-2 flex flex-1 lg:relative lg:m-0 lg:block'>
         <Image
@@ -30,26 +30,14 @@ const About = () => {
           height={'319'}
           alt='about-us-image-1'
           src={aboutDharti.images[0].image}
-          // todo: convert this style to class name
-          style={{
-            borderRadius: '20px',
-            border: '0',
-            objectFit: 'contain',
-          }}
-          // todo: make 127px in percentage
-          className='border-nextColor z-10 rounded-lg border-2 lg:absolute lg:top-[127px]'
+          className='z-10 rounded-[20px] lg:absolute lg:top-[34%]'
         />
         <Image
           width={'411'}
           height={'319'}
           alt='about-us-image-2'
           src={aboutDharti.images[1].image}
-          style={{
-            borderRadius: '20px',
-            objectFit: 'contain',
-            border: '0',
-          }}
-          className='border-nextColor right-20 rounded-lg border-2 lg:absolute'
+          className='right-20 rounded-lg lg:absolute'
         />
       </div>
     </div>

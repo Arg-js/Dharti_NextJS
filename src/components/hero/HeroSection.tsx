@@ -5,14 +5,14 @@ type Hero = 'title' | 'image';
 
 const HeroSection = ({ title, image }: Record<Hero, string>) => {
   return (
-    <div className='relative h-[232px] w-full '>
+    <div className='relative w-full '>
       <Image
         src={image}
-        alt='background for about in hero section '
-        // todo: inherit height h-[232px]
-        className='w-inherit absolute h-[232px] object-cover brightness-[30%]'
+        alt='background for about in hero section'
+        // todo: don't use static value brightness-[30%]'
+        className='w-inherit h-[232px] object-cover brightness-[30%]'
       />
-      <div className='absolute z-30 flex h-[232px] w-full items-center justify-center'>
+      <div className='absolute top-0 flex h-full w-full items-center justify-center'>
         <div className=' flex flex-col items-center justify-center'>
           <p className='pb-[6px] text-[32px] font-bold text-white'>{title}</p>
           <div className='flex'>

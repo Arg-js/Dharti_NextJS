@@ -30,6 +30,9 @@ module.exports = {
         primary_background: {
           DEFAULT: 'hsl(var(--primary_background))',
         },
+        primary_background_200: {
+          DEFAULT: 'hsl(var(--primary_background_200))',
+        },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
@@ -101,8 +104,7 @@ module.exports = {
       //   'hero-section-about': "url('./src/assets/svg/heroSectionAboutBg.svg')",
       // },
       boxShadow: {
-        // todo: add color form the color we have in config
-        primary_shadow: '-8px 8px 2px -1px rgba(183, 208, 167, 1)',
+        primary_background_200: '-8px 8px 2px -1px',
       },
     },
   },
