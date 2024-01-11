@@ -18,6 +18,8 @@ import testimonialImage from './testimonialImage.svg';
 import missionImage from './mission.svg';
 import aboutImage1 from './about1.svg';
 import aboutImage2 from './about2.svg';
+import contactImage from './Contact.svg';
+import TractorImage from './Tractor.svg';
 import productLine1 from './productLine1.svg';
 import productLine2 from './productLine2.svg';
 import productLine3 from './productLine3.svg';
@@ -43,6 +45,8 @@ export {
   missionImage,
   aboutImage1,
   aboutImage2,
+  contactImage,
+  TractorImage,
   productLine1,
   productLine2,
   productLine3,
