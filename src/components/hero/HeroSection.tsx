@@ -10,7 +10,7 @@ const HeroSection = ({ title, image }: Record<Hero, string>) => {
         src={image}
         alt='background for about in hero section '
         // todo: inherit height h-[232px]
-        className='w-inherit absolute h-[232px] object-cover brightness-50'
+        className='w-inherit absolute h-[232px] object-cover brightness-[30%]'
       />
       <div className='absolute z-30 flex h-[232px] w-full items-center justify-center'>
         <div className=' flex flex-col items-center justify-center'>

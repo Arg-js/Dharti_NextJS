@@ -1,6 +1,7 @@
 import React from 'react';
 import Services from '../services/Services';
 import { mapOfIndia } from '../../../public';
+import { Button } from '../ui/button';
 
 // todo: change the name of this component
 export const Header = () => {
@@ -18,6 +19,9 @@ export const Header = () => {
             Unlocking Opportunities, Optimizing Cash Flow, and Empowering
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
+          <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_shadow'>
+            Explore our Solution
+          </Button>
         </div>
         <div>
           <img src={mapOfIndia} />
