@@ -33,7 +33,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     .fill(0)
     .map((_, i) => ++i);
   return (
-    <div className='flex items-center justify-center gap-3 col-span-2'>
+    <div className='col-span-2 flex items-center justify-center gap-3'>
       <PaginationButton variant='next'>
         <ChevronLeft />
       </PaginationButton>
