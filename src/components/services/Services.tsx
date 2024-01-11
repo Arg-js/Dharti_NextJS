@@ -27,11 +27,9 @@ const services = [
 
 const Services = () => {
   return (
-    // todo: inherit bg color
     <div className='container flex flex-col items-center gap-8 pb-8 lg:flex-row lg:pb-0'>
       {services.map(({ title, id, image }) => (
         <Service
-          //todo: this will be replaced by api ko till then let the key be the index
           key={id}
           title={title}
           image={image}

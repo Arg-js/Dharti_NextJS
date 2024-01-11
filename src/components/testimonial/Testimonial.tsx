@@ -51,7 +51,7 @@ export const Testimonial = () => {
               return (
                 <Card key={id}>
                   <CardHeader>
-                    {/* todo: ask */}
+                    {/* ask */}
                     <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
                       <Image
                         src={image}
@@ -62,7 +62,7 @@ export const Testimonial = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    {/* todo: gap is 7 in figma === 2*4 = 8 */}
+                    {/* note: gap is 7 in figma === 2*4 = 8 */}
                     <div className='flex justify-center gap-2 pt-3'>
                       {new Array(rating).fill(null).map((_, index) => (
                         <Image key={index} alt='user rating' src={starIcon} />

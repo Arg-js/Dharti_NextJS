@@ -50,7 +50,7 @@ export const Footer = () => {
                       <h2 className='text-sm font-semibold text-black dark:text-white'>
                         {route.title}
                       </h2>
-                      {/* TODO last element margin Bottom reduction */}
+                      {/* TODO: last element margin Bottom reduction */}
                     </Link>
                   </li>
                 );

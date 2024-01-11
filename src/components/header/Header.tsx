@@ -7,8 +7,8 @@ import { Button } from '../ui/button';
 export const Header = () => {
   return (
     <div className='relative bg-primary_background '>
-      {/* todo: padding bottom to adjust the services card overflow + the required gap */}
-      {/* todo: 142(half of height of service card)+80 ie.(pb-20) = 222 */}
+      {/* note: padding bottom to adjust the services card overflow + the required gap */}
+      {/* note: 142(half of height of service card)+80 ie.(pb-20) = 222 */}
       <div className='container top-20 flex flex-col items-center gap-7 pb-8 pt-20 lg:flex-row lg:pb-[222px]'>
         <div className='flex-1'>
           <div className='text-5xl font-extrabold text-gray_900'>
@@ -19,7 +19,7 @@ export const Header = () => {
             Unlocking Opportunities, Optimizing Cash Flow, and Empowering
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
-          <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_shadow'>
+          <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
             Explore our Solution
           </Button>
         </div>
@@ -28,7 +28,7 @@ export const Header = () => {
         </div>
       </div>
       {/* todo: use flex and try */}
-      {/* todo: why margin bottom doesnot work here */}
+      {/* todo: why margin bottom does not work here */}
       <div className='lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-1/2'>
         <Services />
       </div>
