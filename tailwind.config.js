@@ -100,6 +100,10 @@ module.exports = {
       // backgroundImage: {
       //   'hero-section-about': "url('./src/assets/svg/heroSectionAboutBg.svg')",
       // },
+      boxShadow: {
+        // todo: add color form the color we have in config
+        primary_shadow: '-8px 8px 2px -1px rgba(183, 208, 167, 1)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
