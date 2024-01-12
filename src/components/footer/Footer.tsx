@@ -23,9 +23,9 @@ const quickLinks = [
 export const Footer = () => {
   return (
     <footer className=' w-full bg-muted dark:bg-gray-900'>
-      <div className='container px-4 lg:px-8  lg:pt-8'>
-        <div className='grid grid-cols-1 gap-8   md:grid-cols-4 '>
-          <div className='flex flex-col gap-6'>
+      <div className='container px-4 pt-8 lg:px-8'>
+        <div className='grid grid-cols-1 justify-items-center gap-8 md:grid-cols-4 md:items-start '>
+          <div className='flex flex-col items-center gap-6 md:items-start'>
             <Image
               src={dhartiLogoIcon}
               width={107}
@@ -33,7 +33,7 @@ export const Footer = () => {
               alt='dharti-logo'
             />
             {/* TODO max-w 60 ? */}
-            <h2 className='max-w-60 text-sm font-normal text-black dark:text-white'>
+            <h2 className='max-w-60 text-center text-sm font-normal text-black md:text-start dark:text-white'>
               Lorem ipsum dolor sit amet consectetur. Eleifend morbi ut purus
               adipiscing.
             </h2>
@@ -47,7 +47,7 @@ export const Footer = () => {
                 return (
                   <li className='my-6' key={route.title}>
                     <Link href={route.path}>
-                      <h2 className='text-sm font-semibold text-black dark:text-white'>
+                      <h2 className='text-center text-sm font-semibold text-black md:text-start dark:text-white'>
                         {route.title}
                       </h2>
                       {/* TODO: last element margin Bottom reduction */}
@@ -58,7 +58,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className='text-center md:text-start'>
             <h2 className='text-base font-semibold  text-primary'>
               Get in Touch
             </h2>

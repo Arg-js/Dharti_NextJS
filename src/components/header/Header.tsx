@@ -6,10 +6,10 @@ import { Button } from '../ui/button';
 // todo: change the name of this component
 export const Header = () => {
   return (
-    <div className='relative bg-primary_background '>
+    <div className='relative bg-primary_background'>
       {/* note: padding bottom to adjust the services card overflow + the required gap */}
       {/* note: 142(half of height of service card)+80 ie.(pb-20) = 222 */}
-      <div className='container top-20 flex flex-col items-center gap-7 pb-8 pt-20 lg:flex-row lg:pb-[222px]'>
+      <div className='container top-20 flex flex-col items-center gap-7 pb-8 pt-10 md:pt-20 lg:flex-row xl:pb-[222px]'>
         <div className='flex-1'>
           <div className='text-5xl font-extrabold text-gray_900'>
             <p>Transforming Finance:</p>
@@ -29,7 +29,7 @@ export const Header = () => {
       </div>
       {/* todo: use flex and try */}
       {/* todo: why margin bottom does not work here */}
-      <div className='lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-1/2'>
+      <div className='w-full xl:absolute xl:bottom-0 xl:translate-y-1/2'>
         <Services />
       </div>
     </div>

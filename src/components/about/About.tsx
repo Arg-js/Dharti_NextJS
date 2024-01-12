@@ -15,8 +15,8 @@ const aboutDharti = {
 const About = () => {
   return (
     // todo: my-20
-    <div className='container grid grid-rows-1 gap-x-[120px] md:grid-cols-2 lg:mt-20 '>
-      <div className='grid-item pt-[89px] '>
+    <div className='container grid grid-rows-1 gap-x-[120px] lg:mt-20 lg:grid-cols-2 '>
+      <div className='grid-item pt-10 lg:pt-[89px] '>
         <p className='extraBold32 mb-3 '>{aboutDharti.title}</p>
         <p className='normal16 text-foundation_gray_B200'>
           {aboutDharti.details}{' '}
@@ -24,20 +24,20 @@ const About = () => {
       </div>
       {/* todo: this does not work */}
       {/* <div className='relative flex flex-1 justify-end'> */}
-      <div className='m-2 flex flex-1 lg:relative lg:m-0 lg:block'>
+      <div className='mx-1 my-10 flex flex-1 sm:m-10 lg:relative lg:m-0 lg:block'>
         <Image
           width={'411'}
           height={'319'}
           alt='about-us-image-1'
           src={aboutDharti.images[0].image}
-          className='z-10 rounded-[20px] lg:absolute lg:top-[34%]'
+          className='relative top-[20%] z-10 w-72 rounded-[20px] sm:top-[34%] sm:w-[411px] lg:absolute'
         />
         <Image
           width={'411'}
           height={'319'}
           alt='about-us-image-2'
           src={aboutDharti.images[1].image}
-          className='right-20 rounded-lg lg:absolute'
+          className='absolute right-4 w-72 rounded-lg sm:right-20 sm:w-[411px] lg:absolute'
         />
       </div>
     </div>

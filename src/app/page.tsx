@@ -5,7 +5,6 @@ import ProductLine from '@/components/productLine/productLine';
 import Achievements from '@/components/achievements/Achievements';
 import About from '@/components/about/About';
 import { Header } from '@/components/header/Header';
-import { Navbar } from '@/components/navbar/Navbar';
 export default function Home() {
   return (
     // ask
@@ -14,7 +13,7 @@ export default function Home() {
       <Header />
       {/* note: (206(64+142 ie. height of card/2)) */}
       {/* note: my-20 (80 + 206(64+142)) = 286 ~= 288 === 72*4 */}
-      <div className='md:mb-28 md:mt-72'>
+      <div className='md:mb-28 xl:mt-72'>
         <About />
       </div>
       <Achievements />

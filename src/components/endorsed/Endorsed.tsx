@@ -51,24 +51,14 @@ const Endorsed = () => {
         ))}
       </div> */}
       <div className='flex flex-1 flex-col items-center gap-8'>
-        <div className='flex gap-8'>
+        <div className='flex gap-2 md:gap-8 '>
           {endorsementIconGrp1.map(({ id, image }) => (
-            <Image
-              key={id}
-              src={image}
-              alt='endorsementIcon'
-              className='grid-item'
-            />
+            <Image key={id} src={image} alt='endorsementIcon' />
           ))}
         </div>
-        <div className='flex gap-8'>
+        <div className='flex gap-2 md:gap-8'>
           {endorsementIconGrp2.map(({ id, image }) => (
-            <Image
-              key={id}
-              src={image}
-              alt='endorsementIcon'
-              className='grid-item'
-            />
+            <Image key={id} src={image} alt='endorsementIcon' />
           ))}
         </div>
       </div>

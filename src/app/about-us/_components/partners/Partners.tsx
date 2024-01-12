@@ -10,7 +10,7 @@ const Partners = () => {
           Introducing Our Supporting Partner
         </h2>
         {/* <div className='flex w-full flex-col items-center md:flex-row md:space-x-20'> */}
-        <div className='flex justify-center gap-20'>
+        <div className='grid grid-cols-6 items-center justify-center justify-items-center gap-2 xl:gap-20'>
           {endorsementIcons.map(({ image, id }) => {
             return (
               // <div key={id} className='relative h-[60px] w-auto text-center'>
@@ -18,6 +18,7 @@ const Partners = () => {
                 key={id}
                 alt='company logo'
                 src={image}
+                // ask
                 // fill
                 // className='h-[10px]'
               />

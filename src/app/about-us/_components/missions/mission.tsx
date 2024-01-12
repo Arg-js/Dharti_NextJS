@@ -18,16 +18,14 @@ const missionDetails = {
 
 const OurMission = () => {
   return (
-    <div className='container my-20 grid grid-rows-1 gap-x-[120px] md:mb-20 md:grid-cols-2 md:pt-20'>
-      <div className='grid-item'>
-        <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
-          <Image
-            src={missionDetails.image}
-            alt='OurMission_image'
-            fill
-            objectFit='cover'
-          />
-        </div>
+    <div className='container my-10 grid grid-rows-1 items-center gap-5 sm:my-32 md:mb-20 md:grid-cols-2 lg:my-20 lg:gap-x-[120px] lg:pt-14 xl:pt-28'>
+      <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
+        <Image
+          src={missionDetails.image}
+          alt='OurMission_image'
+          fill
+          objectFit='cover'
+        />
       </div>
       <div className='grid-item'>
         <h1 className='extraBold32 mb-3'>{missionDetails.title}</h1>

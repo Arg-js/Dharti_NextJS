@@ -27,7 +27,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className='container flex flex-col items-center gap-8 pb-8 lg:flex-row lg:pb-0'>
+    <div className='container grid grid-cols-1 justify-items-center gap-8 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:pb-0'>
       {services.map(({ title, id, image }) => (
         <Service
           key={id}
