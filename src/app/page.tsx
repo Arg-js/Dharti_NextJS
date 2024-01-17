@@ -5,6 +5,7 @@ import ProductLine from '@/components/productLine/productLine';
 import Achievements from '@/components/achievements/Achievements';
 import About from '@/components/about/About';
 import { Header } from '@/components/header/Header';
+// todo: make home page different component
 export default function Home() {
   return (
     // ask

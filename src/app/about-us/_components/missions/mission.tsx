@@ -1,4 +1,4 @@
-import { missionImage } from '@/assets/svg';
+import { missionImage, tickIcon } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
 
@@ -35,11 +35,12 @@ const OurMission = () => {
         <ul className='mt-7'>
           {missionDetails.description.map(({ content, id }) => {
             return (
-              <li key={id}>
-                <div className='my-5 flex h-8 items-center space-x-3'>
-                  <div className='h-8 w-8 rounded-full bg-primary_background'></div>
-                  <p className='text-sm font-medium text-black'>{content}</p>
+              <li key={id} className='my-5 flex h-8 items-center space-x-3'>
+                <div className='flex h-8 w-8 justify-center rounded-full bg-primary_background'>
+                  {/* todo: check if the image can take above class name */}
+                  <Image alt='list icon' src={tickIcon} />
                 </div>
+                <p className='text-sm font-medium text-black'>{content}</p>
               </li>
             );
           })}
