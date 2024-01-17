@@ -27,6 +27,7 @@
 
     --foundation-gray-B200: 218, 12%, 36%, 1;
     --gray-900: 230, 21%, 11%, 1;
+    --gray-500: 216, 15%, 52%, 1;
 
     --light-blue: 204, 45%, 98%, 1;
     --blue-background: 210, 38%, 95%, 1;
@@ -97,6 +98,14 @@
   /* text */
   .extraBold32 {
     @apply text-[32px] font-bold;
+  }
+
+  .bold20 {
+    @apply text-xl font-bold;
+  }
+
+  .normal14 {
+    @apply text-sm font-normal;
   }
 
   .normal16 {

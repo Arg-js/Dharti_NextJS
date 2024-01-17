@@ -53,6 +53,9 @@ module.exports = {
         blue_gray500: {
           DEFAULT: 'hsl(var(--blue_gray500))',
         },
+        gray_500: {
+          DEFAULT: 'hsl(var(--gray-500))',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
