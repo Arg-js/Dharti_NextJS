@@ -7,7 +7,7 @@ const FilterPanel = async () => {
   const tags = await getTags();
 
   return (
-    <div className='sticky top-6 mt-6 flex h-min flex-col gap-4 rounded-3xl bg-[#F7FAFC] p-8 '>
+    <div className='sticky top-6 mt-6 flex h-min flex-col gap-4 rounded-3xl bg-ghost_white-100 p-8 text-gray-500'>
       <div className='flex h-14 items-center overflow-hidden rounded-xl bg-white pr-3 text-sm'>
         <input
           className='w-full py-4 pl-3 font-medium focus-visible:outline-none'
@@ -18,7 +18,7 @@ const FilterPanel = async () => {
       <hr className='mt-2' />
       <div>
         <span className='mb-4 block text-lg font-bold'>Categories</span>
-        <ul className='mb-2 mt-2 grid gap-3 text-sm text-[#2D3748]'>
+        <ul className='mb-2 mt-2 grid gap-3 text-sm text-indigo_900'>
           {categories.map((category) => (
             <li key={category.id}>
               <Link href={''}>{category.title}</Link>
@@ -31,7 +31,7 @@ const FilterPanel = async () => {
           {tags?.map(({ id, tag }) => (
             <div
               key={id}
-              className='rounded-full border border-[#E2E8F0] px-4 py-2 text-sm text-gray_700'
+              className='rounded-full border border-ghost_white-200 px-4 py-2 text-sm text-gray_700'
             >
               <Link href={''}>{tag}</Link>
             </div>

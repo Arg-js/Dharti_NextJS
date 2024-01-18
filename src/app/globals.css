@@ -30,11 +30,16 @@
     --gray-700: 218, 16.85%, 34.9%;
     --gray-500: 216, 15%, 52%, 1;
 
+    --ghost-white-100: 204, 2%, 99%;
+    --ghost-white-200: 214, 6%, 94%;
+
     --light-blue: 204, 45%, 98%, 1;
     --blue-background: 210, 38%, 95%, 1;
 
     --blue_gray: 218, 23%, 23%, 1;
     --blue_gray500: 215, 16%, 47%, 1;
+
+    --indigo-900: 218, 38%, 28%;
 
     --primary_background: 100, 31%, 94%, 1;
     --primary_background_200: 97, 30%, 74%, 1;

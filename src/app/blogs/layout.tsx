@@ -5,13 +5,13 @@ import FilterPanel from './_components/FilterPanel';
 
 export const gridTemplate = 'grid-cols-[repeat(auto-fit,minmax(340px,1fr))]';
 
-export default async function Layout({ children }: PropsWithChildren) {
+export default function BlogLayout({ children }: PropsWithChildren) {
   return (
     <>
       <HeroSection title='Blogs' image={heroSectionBlogBg} />
-      <main className='mx-auto mb-20 max-w-[1440px]'>
+      <main className='container mb-20'>
         <div className={`grid ${gridTemplate} gap-8`}>
-          <div className={`col-span-2 grid ${gridTemplate} gap-6 p-6`}>
+          <div className={`col-span-2 grid ${gridTemplate} mt-6 gap-6`}>
             {children}
           </div>
           <FilterPanel />

@@ -85,6 +85,13 @@ module.exports = {
         gray_900: {
           DEFAULT: 'hsl(var(--gray-900))',
         },
+        ghost_white: {
+          100: 'hsl(var(--ghost-white-100))',
+          200: 'hsl(var(--ghost-white-200))',
+        },
+        indigo_900: {
+          DEFAULT: 'hsl(var(--indigo-900))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
