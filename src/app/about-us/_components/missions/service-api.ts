@@ -1,4 +1,6 @@
+import { baseURL } from '@/services/service-api';
+
 export const api = {
-  mission: 'http://202.166.198.129:5028/api/our-mission/',
-  missionList: 'http://202.166.198.129:5028/api/our-mission-list/',
-};
+  mission: `${baseURL}/our-mission/`,
+  missionList: `${baseURL}/our-mission-list/`,
+} as const;

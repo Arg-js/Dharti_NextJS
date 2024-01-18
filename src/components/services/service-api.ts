@@ -1,3 +1,5 @@
+import { baseURL } from '@/services/service-api';
+
 export const api = {
-  services: 'http://202.166.198.129:5028/api/product-standard/',
+  services: `${baseURL}/product-standard/`,
 };
