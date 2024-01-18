@@ -1,3 +1,5 @@
+import { baseURL } from '@/services/service-api';
+
 export const api = {
-  about: 'http://202.166.198.129:5028/api/configuration-about-us/',
+  about: `${baseURL}/configuration-about-us/`,
 } as const;

@@ -16,11 +16,11 @@ const quickLinks = [
   },
   {
     title: 'About',
-    path: '/about',
+    path: '/about-us',
   },
   {
     title: 'Loan Solutions',
-    path: '/loan',
+    path: '/loan-solutions',
   },
   {
     title: 'Blogs',
@@ -46,7 +46,7 @@ export const Footer = async () => {
   return (
     <footer className=' w-full bg-muted dark:bg-gray-900'>
       <div className='container px-4 pt-8 lg:px-8'>
-        <div className='grid grid-cols-1 justify-items-center gap-8 md:grid-cols-4 md:items-start '>
+        <div className='my-6 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-4 md:items-start'>
           <div className='flex flex-col items-center gap-6 md:items-start'>
             <Image
               src={footerDetails.logo}
@@ -123,6 +123,7 @@ export const Footer = async () => {
                     height={28}
                     width={28}
                     key={id}
+                    className='cursor-pointer'
                   />
                 );
               })}
@@ -130,7 +131,7 @@ export const Footer = async () => {
           </div>
         </div>
         <hr />
-        <div className='bg-muted px-4 py-10 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
+        <div className='bg-muted px-4 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
           <span className='text-sm font-normal text-black sm:text-center dark:text-gray-300'>
             © Copyright {new Date().getFullYear()} . All Rights Reserved by
             Dharti

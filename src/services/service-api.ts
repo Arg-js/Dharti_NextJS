@@ -1,3 +1,5 @@
+export const baseURL = process.env.VITE_APP_BACKEND_API;
+
 export interface DhartiResponse<T> {
   data: T;
   status: 0 | 1;
@@ -5,5 +7,5 @@ export interface DhartiResponse<T> {
 }
 
 export const api = {
-  supporting_partners: 'http://202.166.198.129:5028/api/supporting-partner/',
+  supporting_partners: `${baseURL}/supporting-partner/ `,
 };
