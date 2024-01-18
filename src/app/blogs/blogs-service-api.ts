@@ -11,6 +11,13 @@ export interface IBlogDetails {
   category: Category;
 }
 
+// TODO: Might need to change later since category might get added to IBlogDetails
+export type IBlog = Omit<IBlogDetails, 'category'> & {
+  blog: {
+    tag: ITags[];
+  };
+};
+
 export interface Category {
   id: number;
   title: string;
@@ -31,6 +38,18 @@ const getBlogs = async () => {
   return json.data;
 };
 
+const getBlog = async (slug: string) => {
+  const response = await fetch(api.blogBySlug + slug);
+  const json: DhartiResponse<IBlog> = await response.json();
+  return json.data;
+};
+
+const getBlogsCategory = async (blogId: number) => {
+  const response = await fetch(api.blogCategory + blogId);
+  const json: DhartiResponse<IBlogDetails[]> = await response.json();
+  return json.data;
+};
+
 const getTags = async () => {
   const response = await fetch(api.tags);
   if (response.ok) {
@@ -45,4 +64,4 @@ const getCategories = async () => {
   const json: DhartiResponse<ICategory[]> = await response.json();
   return json.data;
 };
-export { getBlogs, getTags, getCategories };
+export { getBlogs, getBlog, getBlogsCategory, getTags, getCategories };

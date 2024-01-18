@@ -36,7 +36,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     // todo: ask
     .map((_, i) => ++i);
   return (
-    <div className='col-span-2 flex items-center justify-center gap-3'>
+    <div className='col-span-2 mt-8 flex items-center justify-center gap-3'>
       <PaginationButton variant='next'>
         <ChevronLeft />
       </PaginationButton>

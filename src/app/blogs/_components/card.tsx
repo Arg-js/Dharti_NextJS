@@ -29,9 +29,9 @@ export function BlogCard({
   slug,
   category,
   // todo: i want to omit id from the blogDetails
-}: IBlogDetails) {
+}: Omit<IBlogDetails, 'id'>) {
   return (
-    <Card className='w-full rounded-3xl border border-[#EDF2F7] p-3'>
+    <Card className='w-full max-w-[500px] rounded-3xl border border-[#EDF2F7] p-3'>
       <CardHeader className='gap-3 p-2'>
         <div className='relative h-[215px] w-full overflow-hidden rounded-xl'>
           <Image
@@ -42,7 +42,7 @@ export function BlogCard({
           />
         </div>
         <div className='mt-4 flex w-full justify-between'>
-          <span className='text-xs font-bold text-[#F8AD44]'>
+          <span className='text-xs font-bold uppercase text-[#F8AD44]'>
             {category.title}
           </span>
           <span className='text-sm font-semibold text-[#A0AEC0]'>{date}</span>
@@ -50,16 +50,19 @@ export function BlogCard({
       </CardHeader>
       <CardContent>
         <CardTitle className='mt-2 text-left text-xl font-extrabold text-[#2D3748]'>
-          <p>{title}</p>
+          <Link href={`/blogs/${slug}`}>{title}</Link>
         </CardTitle>
         <CardDescription className='mt-4 line-clamp-3 text-left text-[#4A5568]'>
           {description}
         </CardDescription>
       </CardContent>
       <CardFooter className='mt-4 p-0 px-2'>
-        <p className='flex items-center gap-3 text-sm font-semibold text-[#639840]'>
+        <Link
+          href={`/blogs/${slug}`}
+          className='flex items-center gap-3 text-sm font-semibold text-[#639840]'
+        >
           Read More <ChevronRight />
-        </p>
+        </Link>
       </CardFooter>
     </Card>
   );
