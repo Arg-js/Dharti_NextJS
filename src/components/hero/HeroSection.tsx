@@ -17,8 +17,9 @@ const HeroSection = ({ title, image }: Record<Hero, string>) => {
           <p className='pb-[6px] text-[32px] font-bold text-white'>{title}</p>
           <div className='flex'>
             <Link href={'/'}>
-              {/* todo: add space between > */}
-              <p className='text-sm font-semibold text-white'>{`Home > `}</p>
+              <p className='text-sm font-semibold text-white'>
+                Home &nbsp; &gt; &nbsp;
+              </p>
             </Link>
             <p className='text-sm font-semibold text-white'>{title}</p>
           </div>

@@ -1,44 +1,16 @@
 import Link from 'next/link';
-import BlogCard, { CardProps } from './card';
-import Pagination from './pagination';
+import { BlogCard, CardProps } from './_components/card';
+import Pagination from './_components/pagination';
 import HeroSection from '@/components/hero/HeroSection';
 import { heroSectionBlogBg } from '@/assets/svg';
-
-const getCardsData = async () => {
-  return Array<CardProps & { id: number }>(5).fill({
-    id: 0,
-    title: 'From Field to Fork: The Journey of Food Traceability',
-    description:
-      'Delve into the realm of genetic engineering in agriculture. Unearth how genetically modified crops are addressing challenges such as pests, disease, and environmental stress asa aiu aiusd aiujsdas.',
-    tag: 'Biotechnology',
-    date: 'Aug 6 ,2020',
-    imageSrc:
-      'https://images.unsplash.com/photo-1682685797703-2bb22dbb885b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '',
-  });
-};
-
-const getCategories = async () => {
-  return [
-    { id: 1, name: 'Agriculture innovation (24)' },
-    { id: 2, name: 'Agriculture innovation (24)' },
-    { id: 3, name: 'Agriculture innovation (24)' },
-    { id: 4, name: 'Agriculture innovation (24)' },
-    { id: 5, name: 'Agriculture innovation (24)' },
-  ];
-};
-
-const getTags = async () => {
-  return ['Agriculture', 'Loan'];
-};
+import { getBlogs, getTags, getCategories } from './blogs-service-api';
 
 const gridTemplate = 'grid-cols-[repeat(auto-fit,minmax(340px,1fr))]';
 
 export default async function Blogs() {
-  const blogs = await getCardsData();
+  const blogs = await getBlogs();
   const categories = await getCategories();
   const tags = await getTags();
-
   return (
     <>
       <HeroSection title='Blogs' image={heroSectionBlogBg} />
@@ -64,14 +36,14 @@ export default async function Blogs() {
               <ul className='mb-2 mt-2 grid gap-3 text-sm text-[#2D3748]'>
                 {categories.map((category) => (
                   <li key={category.id}>
-                    <Link href={''}>{category.name}</Link>
+                    <Link href={''}>{category.title}</Link>
                   </li>
                 ))}
               </ul>
               <hr className='mb-5 mt-5' />
               <span className='mb-4 block text-lg font-bold'>Post Tag</span>
               <div className='flex flex-wrap gap-4'>
-                {tags.map((tag) => (
+                {tags?.map((tag) => (
                   <div
                     key={tag}
                     className='rounded-full border border-[#E2E8F0] px-4 py-2 text-sm text-[#4A5568]'
