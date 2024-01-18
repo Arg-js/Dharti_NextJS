@@ -35,7 +35,7 @@ const getTags = async () => {
   const response = await fetch(api.tags);
   if (response.ok) {
     const json: DhartiResponse<ITags[]> = await response.json();
-    return json;
+    return json.data;
   }
   return undefined;
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import BlueBackGround from '../backgrounds/BlueBackGround';
+import { getAchievement } from './achievements-service-api';
 
 const achievements = {
   title:
@@ -14,14 +15,15 @@ const achievements = {
   ],
 };
 
-const Achievements = () => {
+const Achievements = async () => {
+  const achievementDetails = await getAchievement();
   return (
     <BlueBackGround title={achievements.title} desc={achievements.desc}>
       <div className='grid grid-cols-2 md:pl-16'>
         {/* todo: the flex box is being repeated */}
         <div className='flex flex-col items-center border-b-2 border-r-2 p-4'>
           <p className='pb-2 text-4xl font-extrabold'>
-            {achievements.professionals[0].count}
+            {achievementDetails.counter_farmer}
           </p>
           <p className='text-base font-semibold'>
             {achievements.professionals[0].designation}
@@ -29,7 +31,7 @@ const Achievements = () => {
         </div>
         <div className='flex flex-col items-center border-b-2 p-4'>
           <p className='pb-2 text-4xl font-extrabold'>
-            {achievements.professionals[1].count}
+            {achievementDetails.counter_retailers}
           </p>
           <p className='text-base font-semibold'>
             {achievements.professionals[1].designation}
@@ -37,7 +39,7 @@ const Achievements = () => {
         </div>
         <div className=' flex flex-col items-center border-r-2 p-4'>
           <p className='pb-2 text-4xl font-extrabold'>
-            {achievements.professionals[2].count}
+            {achievementDetails.counter_disbursement}
           </p>
           <p className='text-base font-semibold'>
             {achievements.professionals[2].designation}
@@ -45,7 +47,7 @@ const Achievements = () => {
         </div>
         <div className='flex flex-col items-center p-4'>
           <p className='pb-2 text-4xl font-extrabold'>
-            {achievements.professionals[3].count}
+            {achievementDetails.counter_traders}
           </p>
           <p className='text-base font-semibold'>
             {achievements.professionals[3].designation}

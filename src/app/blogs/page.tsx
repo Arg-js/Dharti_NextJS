@@ -43,9 +43,9 @@ export default async function Blogs() {
               <hr className='mb-5 mt-5' />
               <span className='mb-4 block text-lg font-bold'>Post Tag</span>
               <div className='flex flex-wrap gap-4'>
-                {tags?.map((tag) => (
+                {tags?.map(({ id, tag }) => (
                   <div
-                    key={tag}
+                    key={id}
                     className='rounded-full border border-[#E2E8F0] px-4 py-2 text-sm text-[#4A5568]'
                   >
                     <Link href={''}>{tag}</Link>
