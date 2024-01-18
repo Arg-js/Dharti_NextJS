@@ -56,6 +56,9 @@ module.exports = {
         gray_500: {
           DEFAULT: 'hsl(var(--gray-500))',
         },
+        gray_700: {
+          DEFAULT: 'hsl(var(--gray-700))',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',

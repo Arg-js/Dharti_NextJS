@@ -27,7 +27,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           className='object-cover'
         />
       </div>
-      <div className='mt-4 text-sm leading-8  text-[#4A5568]'>
+      <div className='mt-4 text-sm leading-8 text-gray_700'>
         {blog.description}
       </div>
       {!!blogsCategory.length && (

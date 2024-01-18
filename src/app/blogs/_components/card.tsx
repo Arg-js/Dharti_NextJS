@@ -52,7 +52,7 @@ export function BlogCard({
         <CardTitle className='mt-2 text-left text-xl font-extrabold text-[#2D3748]'>
           <Link href={`/blogs/${slug}`}>{title}</Link>
         </CardTitle>
-        <CardDescription className='mt-4 line-clamp-3 text-left text-[#4A5568]'>
+        <CardDescription className='mt-4 line-clamp-3 text-left text-gray_700'>
           {description}
         </CardDescription>
       </CardContent>
