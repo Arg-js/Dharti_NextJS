@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
 import { starIcon, testimonialImage } from '@/assets/svg';
+import { getTestimonial } from './testimonial-service-api';
 const testimonialData = [
   {
     id: 0,
@@ -37,7 +38,9 @@ const testimonialData = [
   },
 ];
 
-export const Testimonial = () => {
+export const Testimonial = async () => {
+  const testimonialData = await getTestimonial();
+  console.log('first', testimonialData);
   return (
     <div className=' w-full'>
       <div className='container flex flex-col items-center py-10 md:px-10 '>
@@ -46,29 +49,30 @@ export const Testimonial = () => {
           3940+ Happy Dharti Users
         </p>
         <div className='mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
-          {testimonialData.map(
-            ({ id, image, designation, description, rating, name }) => {
+          {testimonialData?.map(
+            ({ id, image, category, description, rating, name }) => {
               return (
                 <Card key={id}>
                   <CardHeader>
                     {/* ask */}
                     <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
-                      <Image
+                      {/* <Image
                         src={image}
                         alt='testimonialPerson'
                         fill
                         objectFit='cover'
-                      />
+                      /> */}
                     </div>
                   </CardHeader>
                   <CardContent>
                     {/* note: gap is 7 in figma === 2*4 = 8 */}
-                    <div className='flex justify-center gap-2 pt-3'>
-                      {new Array(rating).fill(null).map((_, index) => (
+                    <div className='flex justify-center gap-2 pt-2'>
+                      {new Array(+rating).fill(null).map((_, index) => (
                         <Image key={index} alt='user rating' src={starIcon} />
                       ))}
                     </div>
-                    <p className='py-5 text-base font-normal text-black '>
+                    <p className='my-6 line-clamp-3 overflow-hidden break-all text-base font-normal text-black'>
+                      {/* note: the description gets sliced up when the characters are larger than 100 words */}
                       {description}
                     </p>
                     <div className='flex justify-center space-x-3'>
@@ -76,7 +80,7 @@ export const Testimonial = () => {
                         {name}
                       </p>
                       <p className='text-base font-medium text-blue_gray500'>
-                        {designation}
+                        {category.title}
                       </p>
                     </div>
                   </CardContent>

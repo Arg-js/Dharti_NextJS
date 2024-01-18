@@ -10,6 +10,7 @@ function PaginationButton({
   variant?: 'next' | 'default' | 'selected';
 }) {
   return (
+    // todo: define colors in global config, ask prajjwal
     <button
       className={cn(
         'grid h-12 w-12 place-items-center rounded-[50%] border border-[#E2E8F0] text-[#718096]',
@@ -18,6 +19,7 @@ function PaginationButton({
           [`border-none bg-[#82AD66] text-white`]: variant === 'selected',
         },
         {
+          // todo: use aspect ratio
           [`mx-5 h-11 w-11 border-none bg-[#EFF5EC] font-bold text-[#82AD66]`]:
             variant === 'next',
         }
@@ -31,6 +33,7 @@ function PaginationButton({
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const pages = Array(totalPages)
     .fill(0)
+    // todo: ask
     .map((_, i) => ++i);
   return (
     <div className='col-span-2 flex items-center justify-center gap-3'>

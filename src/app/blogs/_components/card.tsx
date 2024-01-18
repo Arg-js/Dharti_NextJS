@@ -10,6 +10,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import { IBlogDetails } from '../blogs-service-api';
 
 export type CardProps = {
   tag: string;
@@ -20,45 +21,45 @@ export type CardProps = {
   href: string;
 };
 
-export default function BlogCard({
-  tag,
-  date,
+export function BlogCard({
   title,
+  image,
   description,
-  imageSrc,
-  href,
-}: CardProps) {
+  date,
+  slug,
+  category,
+  // todo: i want to omit id from the blogDetails
+}: IBlogDetails) {
   return (
     <Card className='w-full rounded-3xl border border-[#EDF2F7] p-3'>
       <CardHeader className='gap-3 p-2'>
         <div className='relative h-[215px] w-full overflow-hidden rounded-xl'>
           <Image
-            src={imageSrc}
+            src={image}
             alt={`Image for ${title}`}
             fill
             className='object-cover'
           />
         </div>
         <div className='mt-4 flex w-full justify-between'>
-          <span className='text-xs font-bold text-[#F8AD44]'>{tag}</span>
+          <span className='text-xs font-bold text-[#F8AD44]'>
+            {category.title}
+          </span>
           <span className='text-sm font-semibold text-[#A0AEC0]'>{date}</span>
         </div>
       </CardHeader>
       <CardContent>
         <CardTitle className='mt-2 text-left text-xl font-extrabold text-[#2D3748]'>
-          <Link href={href}>{title}</Link>
+          <p>{title}</p>
         </CardTitle>
         <CardDescription className='mt-4 line-clamp-3 text-left text-[#4A5568]'>
           {description}
         </CardDescription>
       </CardContent>
       <CardFooter className='mt-4 p-0 px-2'>
-        <Link
-          href={href}
-          className='flex items-center gap-3 text-sm font-semibold text-[#639840]'
-        >
+        <p className='flex items-center gap-3 text-sm font-semibold text-[#639840]'>
           Read More <ChevronRight />
-        </Link>
+        </p>
       </CardFooter>
     </Card>
   );
