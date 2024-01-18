@@ -11,6 +11,7 @@ import {
   partnerIcon2,
 } from '@/assets/svg';
 import Image from 'next/image';
+import { getSupportingPartners } from '@/services/supporting-partners-api';
 
 const endorsementIconGrp1 = [
   { id: 0, image: endorsementIcon1 },
@@ -31,7 +32,10 @@ export const endorsementIcons = [
   // partnerIcon2,
 ];
 
-const Endorsed = () => {
+const Endorsed = async () => {
+  const supportingPartners = await getSupportingPartners();
+  const supportingPartnersGrp1 = supportingPartners?.slice(0, 3);
+  const supportingPartnersGrp2 = supportingPartners?.slice(3, 6);
   return (
     <BlueBackGround
       title={'Endorsed by Lenders: A Trusted Track Record'}
@@ -51,14 +55,27 @@ const Endorsed = () => {
         ))}
       </div> */}
       <div className='flex flex-1 flex-col items-center gap-8'>
-        <div className='flex gap-2 md:gap-8 '>
-          {endorsementIconGrp1.map(({ id, image }) => (
-            <Image key={id} src={image} alt='endorsementIcon' />
+        <div className='relative flex gap-2 md:gap-8'>
+          {/* todo: auto width fit */}
+          {supportingPartnersGrp1?.map(({ id, image }) => (
+            <Image
+              key={id}
+              height={68}
+              width={68}
+              src={image}
+              alt='endorsementIcon'
+            />
           ))}
         </div>
         <div className='flex gap-2 md:gap-8'>
-          {endorsementIconGrp2.map(({ id, image }) => (
-            <Image key={id} src={image} alt='endorsementIcon' />
+          {supportingPartnersGrp2?.map(({ id, image }) => (
+            <Image
+              key={id}
+              height={68}
+              width={68}
+              src={image}
+              alt='endorsementIcon'
+            />
           ))}
         </div>
       </div>

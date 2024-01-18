@@ -1,7 +1,7 @@
 import { missionImage, tickIcon } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
-import { getMissionList } from './mission-service-api';
+import { getMissionDetails, getMissionList } from './mission-service-api';
 
 const missionDetails = {
   title: 'Our mission and Goal',
@@ -18,21 +18,24 @@ const missionDetails = {
 };
 
 const OurMission = async () => {
+  const missionDetails = await getMissionDetails();
   const missionList = await getMissionList();
   return (
     <div className='container my-10 grid grid-rows-1 items-center gap-5 sm:my-32 md:mb-20 md:grid-cols-2 lg:my-20 lg:gap-x-[120px] lg:pt-14 xl:pt-28'>
       <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
         <Image
-          src={missionDetails.image}
+          src={missionDetails?.our_mission_image}
           alt='OurMission_image'
           fill
           objectFit='cover'
         />
       </div>
       <div className='grid-item'>
-        <h1 className='extraBold32 mb-3'>{missionDetails.title}</h1>
+        <h1 className='extraBold32 mb-3'>
+          {missionDetails?.our_mission_title}
+        </h1>
         <p className='normal16 text-foundation_gray_B200'>
-          {missionDetails.subTitle}
+          {missionDetails?.our_mission_description}
         </p>
         <ul className='mt-7'>
           {missionList?.map(({ list, id }) => {

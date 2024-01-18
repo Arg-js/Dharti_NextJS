@@ -40,7 +40,6 @@ const testimonialData = [
 
 export const Testimonial = async () => {
   const testimonialData = await getTestimonial();
-  console.log('first', testimonialData);
   return (
     <div className=' w-full'>
       <div className='container flex flex-col items-center py-10 md:px-10 '>
@@ -56,12 +55,13 @@ export const Testimonial = async () => {
                   <CardHeader>
                     {/* ask */}
                     <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
-                      {/* <Image
+                      {/* todo: move classname inside the image */}
+                      <Image
                         src={image}
                         alt='testimonialPerson'
                         fill
                         objectFit='cover'
-                      /> */}
+                      />
                     </div>
                   </CardHeader>
                   <CardContent>

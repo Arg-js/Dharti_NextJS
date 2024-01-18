@@ -28,6 +28,10 @@ import financeService1Image from './financeService1.svg';
 import financeService2Image from './financeService2.svg';
 import financeService3Image from './financeService3.svg';
 import tickIcon from './tick.svg';
+import Xlogo from './Xlogo.svg';
+import githubLogo from './githubLogo.svg';
+import facebookLogo from './facebookLogo.svg';
+import instaLogo from './instaLogo.svg';
 
 export {
   dhartiLogoIcon,
@@ -60,4 +64,8 @@ export {
   financeService2Image,
   financeService3Image,
   tickIcon,
+  instaLogo,
+  facebookLogo,
+  githubLogo,
+  Xlogo,
 };

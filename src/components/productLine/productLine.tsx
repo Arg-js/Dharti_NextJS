@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
 import { productLine1, productLine2, productLine3 } from '@/assets/svg';
+import { getProductLines } from './product-line-service-api';
 
 const products = [
   {
@@ -25,7 +26,9 @@ const productDetails = {
   subTitle:
     'Our products are more than tools; they are catalysts for growth and efficiency. Explore the Dharti advantage',
 };
-const ProductLine = () => {
+const ProductLine = async () => {
+  const productLines = await getProductLines();
+  const productLine = productLines.slice(0, 3);
   return (
     // todo: pb and pt not equal
     <div className='w-full md:pt-10 lg:pb-14'>
@@ -36,13 +39,15 @@ const ProductLine = () => {
         <p className='texts-black py-3 text-base font-normal text-black'>
           {productDetails.subTitle}
         </p>
-        <div className='grid gap-8  pt-10 md:grid-cols-2 lg:grid-cols-3'>
-          {products.map((product, index) => {
+        {/* todo: grid i want the content to use full width */}
+        {/* currently i am passing width in image 419px */}
+        <div className='grid gap-8 pt-10 md:grid-cols-2 lg:grid-cols-3'>
+          {productLine.map((product, index) => {
             return (
               // todo: add border radius to the card
               <Card key={index} className='text-card-foreground shadow-sm'>
                 <CardHeader className='p-0'>
-                  <div className='relative h-72 w-full overflow-hidden rounded-t-md'>
+                  <div className='relative h-72 w-[419px] overflow-hidden rounded-t-md'>
                     <Image
                       src={product.image}
                       alt='testimonialPerson'
@@ -54,7 +59,7 @@ const ProductLine = () => {
                 <CardContent>
                   <p className='pb-3 pt-5 text-lg font-bold'>{product.title}</p>
                   <p className='px-4 text-sm font-normal text-black md:pb-2'>
-                    {product.desc}
+                    {product.description}
                   </p>
                 </CardContent>
               </Card>
