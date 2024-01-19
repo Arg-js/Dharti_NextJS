@@ -21,7 +21,7 @@ const OurMission = async () => {
   const missionDetails = await getMissionDetails();
   const missionList = await getMissionList();
   return (
-    <div className='container my-10 grid grid-rows-1 items-center gap-5 sm:my-32 md:mb-20 md:grid-cols-2 lg:my-20 lg:gap-x-[120px] lg:pt-14 xl:pt-28'>
+    <div className='container my-10 grid grid-rows-1 items-center gap-5 sm:my-32 md:mb-20 md:grid-cols-2  lg:my-20 lg:pt-14 xl:gap-x-[120px] xl:pt-28'>
       <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
         <Image
           src={missionDetails?.our_mission_image || ''}
@@ -41,7 +41,7 @@ const OurMission = async () => {
           {missionList?.map(({ list, id }) => {
             return (
               <li key={id} className='my-5 flex h-8 items-center space-x-3'>
-                <div className='flex h-8 w-8 justify-center rounded-full bg-primary_background'>
+                <div className='flex aspect-square h-8 justify-center rounded-full bg-primary_background'>
                   {/* todo: check if the image can take above class name */}
                   <Image alt='list icon' src={tickIcon} />
                 </div>

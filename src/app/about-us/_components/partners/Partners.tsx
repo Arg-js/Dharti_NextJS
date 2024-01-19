@@ -11,24 +11,43 @@ const Partners = async () => {
         <h2 className='text-lg font-bold md:text-3xl'>
           Introducing Our Supporting Partner
         </h2>
-        {/* <div className='flex w-full flex-col items-center md:flex-row md:space-x-20'> */}
-        <div className='grid grid-cols-6 items-center justify-center justify-items-center gap-2 xl:gap-20'>
-          {supportingPartners?.map(({ image, id }) => {
-            return (
-              <div
-                key={id}
-                className='relative aspect-video h-[60px] text-center mix-blend-darken'
-              >
-                <Image
+        <div className='lg:md-0 container relative my-5 flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-[75dvw] xl:w-[60dvw]'>
+          <div className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-2 xl:gap-16  '>
+            {supportingPartners?.map(({ image, id }) => {
+              return (
+                <div
                   key={id}
-                  alt='company logo'
-                  src={image}
-                  objectFit='contain'
-                  fill
-                />
-              </div>
-            );
-          })}
+                  className='relative aspect-video h-[60px] text-center mix-blend-color-burn'
+                >
+                  <Image
+                    key={id}
+                    alt='company logo'
+                    src={image}
+                    objectFit='contain'
+                    fill
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-2 xl:gap-16  '>
+            {supportingPartners?.map(({ image, id }) => {
+              return (
+                <div
+                  key={id}
+                  className='relative aspect-video h-[60px] text-center mix-blend-color-burn'
+                >
+                  <Image
+                    key={id}
+                    alt='company logo'
+                    src={image}
+                    objectFit='contain'
+                    fill
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
