@@ -24,7 +24,7 @@ const OurMission = async () => {
     <div className='container my-10 grid grid-rows-1 items-center gap-5 sm:my-32 md:mb-20 md:grid-cols-2 lg:my-20 lg:gap-x-[120px] lg:pt-14 xl:pt-28'>
       <div className='relative h-96 w-full overflow-hidden rounded-[20px]'>
         <Image
-          src={missionDetails?.our_mission_image}
+          src={missionDetails?.our_mission_image || ''}
           alt='OurMission_image'
           fill
           objectFit='cover'
@@ -45,7 +45,7 @@ const OurMission = async () => {
                   {/* todo: check if the image can take above class name */}
                   <Image alt='list icon' src={tickIcon} />
                 </div>
-                <p className='text-sm font-medium text-black'>{list}</p>
+                <p className='text-sm font-medium text-gray_600'>{list}</p>
               </li>
             );
           })}

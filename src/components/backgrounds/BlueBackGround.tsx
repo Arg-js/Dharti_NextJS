@@ -12,7 +12,7 @@ const BlueBackGround = ({ title, desc, children }: IProps) => {
         <div className='flex flex-col space-x-2 rounded-3xl bg-light_blue p-5 md:flex-row md:space-x-6 lg:my-20 lg:p-24'>
           <div className='flex-1 space-y-3'>
             <p className='mr-3 text-lg font-bold md:text-3xl'>{title}</p>
-            <p className='texts-black py-3 text-base font-normal'>{desc}</p>
+            <p className='py-3 text-base font-normal'>{desc}</p>
           </div>
           <div className='flex-1'>{children}</div>
         </div>

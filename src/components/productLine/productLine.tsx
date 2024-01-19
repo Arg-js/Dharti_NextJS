@@ -36,7 +36,7 @@ const ProductLine = async () => {
         <p className='mr-3  text-lg font-bold md:text-3xl'>
           {productDetails.title}
         </p>
-        <p className='texts-black py-3 text-base font-normal text-black'>
+        <p className='py-3 text-base font-normal text-gray_600'>
           {productDetails.subTitle}
         </p>
         {/* todo: grid i want the content to use full width */}
@@ -58,7 +58,7 @@ const ProductLine = async () => {
                 </CardHeader>
                 <CardContent>
                   <p className='pb-3 pt-5 text-lg font-bold'>{product.title}</p>
-                  <p className='px-4 text-sm font-normal text-black md:pb-2'>
+                  <p className='px-4 text-sm font-normal text-gray_600 md:pb-2'>
                     {product.description}
                   </p>
                 </CardContent>

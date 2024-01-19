@@ -10,15 +10,13 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
   return (
     <div>
       <div className='mt-4 flex w-full justify-between'>
-        <span className='text-xs font-bold uppercase text-[#F8AD44]'>
+        <span className='text-xs font-bold uppercase text-secondary'>
           {/* TODO: Change this when we have categories in blog detail api */}
           Biotechnology
         </span>
-        <span className='text-sm font-semibold text-[#A0AEC0]'>
-          {blog.date}
-        </span>
+        <span className='text-sm font-semibold text-gray_400'>{blog.date}</span>
       </div>
-      <div className='extraBold32 mt-2 text-[#2D3748]'>{blog.title}</div>
+      <div className='extraBold32 mt-2 text-gray_700'>{blog.title}</div>
       <div className='relative mt-5 h-[479px] w-full overflow-hidden rounded-xl'>
         <Image
           src={blog.image}
@@ -27,7 +25,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           className='object-cover'
         />
       </div>
-      <div className='mt-4 text-sm leading-8 text-gray_700'>
+      <div className='mt-4 text-sm leading-8 text-gray_600'>
         {blog.description}
       </div>
       {!!blogsCategory.length && (

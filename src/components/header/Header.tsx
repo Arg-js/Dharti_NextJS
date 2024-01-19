@@ -15,7 +15,7 @@ export const Header = () => {
             <p>Transforming Finance:</p>
             <p>Pioneering the Future of Seamless Supply Chains</p>
           </div>
-          <div className='mt-3 text-base font-medium text-black'>
+          <div className='mt-3 text-base font-medium text-gray_600'>
             Unlocking Opportunities, Optimizing Cash Flow, and Empowering
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
