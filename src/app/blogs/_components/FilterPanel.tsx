@@ -7,7 +7,7 @@ const FilterPanel = async () => {
   const tags = await getTags();
 
   return (
-    <div className='sticky top-6 mt-6 flex h-min flex-col gap-4 rounded-3xl bg-gray_50 p-8 text-gray-500'>
+    <div className='sticky top-32 mt-6 flex h-min flex-col gap-4 rounded-3xl bg-gray_50 p-8 text-gray-500'>
       <div className='flex h-14 items-center overflow-hidden rounded-xl bg-white pr-3 text-sm'>
         <input
           className='w-full py-4 pl-3 font-medium focus-visible:outline-none'

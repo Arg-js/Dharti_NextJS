@@ -17,14 +17,14 @@ const Partners = async () => {
             return (
               <div
                 key={id}
-                className='relative aspect-square h-[60px] text-center'
+                className='relative aspect-video h-[60px] text-center mix-blend-darken'
               >
                 <Image
                   key={id}
                   alt='company logo'
                   src={image}
+                  objectFit='contain'
                   fill
-                  // className='h-[10px]'
                 />
               </div>
             );

@@ -28,7 +28,6 @@ export function BlogCard({
   date,
   slug,
   category,
-  // todo: i want to omit id from the blogDetails
 }: Omit<IBlogDetails, 'id'>) {
   return (
     <Card className='w-full max-w-[500px] rounded-3xl border border-gray_100 p-3'>

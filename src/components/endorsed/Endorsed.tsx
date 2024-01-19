@@ -55,27 +55,35 @@ const Endorsed = async () => {
         ))}
       </div> */}
       <div className='flex flex-1 flex-col items-center gap-8'>
-        <div className='relative flex gap-2 md:gap-8'>
+        <div className='flex gap-2 md:gap-8'>
           {/* todo: auto width fit */}
           {supportingPartnersGrp1?.map(({ id, image }) => (
-            <Image
+            <div
+              className='relative aspect-[3/2] h-[68px] mix-blend-darken'
               key={id}
-              height={68}
-              width={68}
-              src={image}
-              alt='endorsementIcon'
-            />
+            >
+              <Image
+                src={image}
+                alt='endorsementIcon'
+                objectFit='contain'
+                fill
+              />
+            </div>
           ))}
         </div>
         <div className='flex gap-2 md:gap-8'>
           {supportingPartnersGrp2?.map(({ id, image }) => (
-            <Image
+            <div
+              className='relative aspect-[3/2] h-[68px] mix-blend-darken'
               key={id}
-              height={68}
-              width={68}
-              src={image}
-              alt='endorsementIcon'
-            />
+            >
+              <Image
+                objectFit='contain'
+                src={image}
+                alt='endorsementIcon'
+                fill
+              />
+            </div>
           ))}
         </div>
       </div>
