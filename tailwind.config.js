@@ -111,6 +111,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--gray-900))',
         },
       },
+      gridTemplateColumns: {
+        card: 'repeat(auto-fit,minmax(340px,1fr))',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
