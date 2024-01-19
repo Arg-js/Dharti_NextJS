@@ -73,7 +73,7 @@ export const Testimonial = async () => {
                     </div>
                     <p className='my-6 line-clamp-3 overflow-hidden break-all text-base font-normal text-gray_600'>
                       {/* note: the description gets sliced up when the characters are larger than 100 words */}
-                      {description}
+                      &ldquo;{description}&ldquo;
                     </p>
                     <div className='flex justify-center space-x-3'>
                       <p className='text-base font-semibold text-blue_gray'>

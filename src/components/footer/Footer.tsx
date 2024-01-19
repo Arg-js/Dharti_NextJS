@@ -130,6 +130,7 @@ export const Footer = async () => {
             </div>
           </div>
         </div>
+        {/* todo: margin in HR does not work */}
         <hr />
         <div className='bg-muted px-4 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
           <span className='text-sm font-normal text-gray_500 sm:text-center dark:text-gray-300'>

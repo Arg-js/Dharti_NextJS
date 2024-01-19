@@ -27,20 +27,22 @@ const About = async () => {
       {/* todo: this does not work */}
       {/* <div className='relative flex flex-1 justify-end'> */}
       <div className='mx-1 my-10 flex flex-1 sm:m-10 lg:relative lg:m-0 lg:block'>
-        {/* <Image
+        <Image
           width={'411'}
           height={'319'}
+          // todo: make this dynamic
           alt='about-us-image-1'
-          src={about?.about_us_image}
+          // todo: but i always get the images
+          src={about?.about_us_image ?? ''}
           className='relative top-[20%] z-10 w-72 rounded-[20px] sm:top-[34%] sm:w-[411px] lg:absolute'
         />
         <Image
           width={'411'}
           height={'319'}
           alt='about-us-image-2'
-          src={about?.about_us_image_two}
+          src={about?.about_us_image_two ?? ''}
           className='absolute right-4 w-72 rounded-lg sm:right-20 sm:w-[411px] lg:absolute'
-        /> */}
+        />
       </div>
     </div>
   );

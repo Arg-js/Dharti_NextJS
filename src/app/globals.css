@@ -119,6 +119,7 @@
     @apply text-sm font-normal;
   }
 
+  /* todo: this variant might be default and not required */
   .normal16 {
     @apply text-base font-normal;
   }

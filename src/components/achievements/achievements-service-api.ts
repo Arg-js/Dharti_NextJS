@@ -2,10 +2,10 @@ import { DhartiResponse } from '@/services/service-api';
 import { api } from './service-api';
 
 export interface IAchievements {
-  counter_farmer: string;
-  counter_retailers: string;
-  counter_disbursement: string;
-  counter_traders: string;
+  counter_corporate: string;
+  counter_vendor: string;
+  counter_dealer: string;
+  counter_lender: string;
 }
 
 const getAchievement = async () => {

@@ -33,9 +33,7 @@ const ProductLine = async () => {
     // todo: pb and pt not equal
     <div className='w-full md:pt-10 lg:pb-14'>
       <div className='container flex flex-col items-center py-12 md:py-2'>
-        <p className='mr-3  text-lg font-bold md:text-3xl'>
-          {productDetails.title}
-        </p>
+        <p className='text-lg font-bold md:text-3xl'>{productDetails.title}</p>
         <p className='py-3 text-base font-normal text-gray_600'>
           {productDetails.subTitle}
         </p>

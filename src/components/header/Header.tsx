@@ -2,6 +2,8 @@ import React from 'react';
 import Services from '../services/Services';
 import { mapOfIndia } from '../../../public';
 import { Button } from '../ui/button';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // todo: change the name of this component
 export const Header = () => {
@@ -19,12 +21,19 @@ export const Header = () => {
             Unlocking Opportunities, Optimizing Cash Flow, and Empowering
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
-          <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
-            Explore our Solution
-          </Button>
+          <Link href={`/loan-solutions`}>
+            <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
+              Explore our Solution
+            </Button>
+          </Link>
         </div>
         <div>
-          <img src={mapOfIndia} />
+          <Image
+            alt={'map of India'}
+            height={562}
+            width={523}
+            src={mapOfIndia}
+          />
         </div>
       </div>
       {/* todo: use flex and try */}
