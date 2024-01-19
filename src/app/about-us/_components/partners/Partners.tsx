@@ -11,9 +11,8 @@ const Partners = async () => {
         <h2 className='text-lg font-bold md:text-3xl'>
           Introducing Our Supporting Partner
         </h2>
-        {/* <div className='flex w-full flex-col items-center md:flex-row md:space-x-20'> */}
-        <div className='relative mx-auto my-5 lg:md-0 w-[60dvw] flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]'>
-          <div className='animate-marquee-infinite flex items-center justify-around justify-items-center gap-2 xl:gap-16  '>
+        <div className='lg:md-0 container relative my-5 flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-[75dvw] xl:w-[60dvw]'>
+          <div className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-2 xl:gap-16  '>
             {supportingPartners?.map(({ image, id }) => {
               return (
                 <div
@@ -31,7 +30,7 @@ const Partners = async () => {
               );
             })}
           </div>
-          <div className='animate-marquee-infinite flex items-center justify-around justify-items-center gap-2 xl:gap-16  '>
+          <div className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-2 xl:gap-16  '>
             {supportingPartners?.map(({ image, id }) => {
               return (
                 <div

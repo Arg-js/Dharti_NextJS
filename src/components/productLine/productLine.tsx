@@ -39,7 +39,7 @@ const ProductLine = async () => {
         </p>
         {/* todo: grid i want the content to use full width */}
         {/* currently i am passing width in image 419px */}
-        <div className='grid gap-8 pt-10 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-8 pt-10 lg:grid-cols-2 xl:grid-cols-3'>
           {productLine.map((product, index) => {
             return (
               // todo: add border radius to the card
