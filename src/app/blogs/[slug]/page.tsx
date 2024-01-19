@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { getBlog, getBlogsCategory } from '../blogs-service-api';
 import { BlogCard } from '../_components/card';
-import { gridTemplate } from '../layout';
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug);
@@ -33,7 +32,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           <div className='mt-8'>
             <p className='bold20 text-primary'>Explore more blogs</p>
           </div>
-          <div className={`mt-3 grid ${gridTemplate} gap-8`}>
+          <div className={`mt-3 grid grid-cols-card gap-8`}>
             {blogsCategory.map(({ id, ...props }) => (
               <BlogCard {...props} key={id} />
             ))}
