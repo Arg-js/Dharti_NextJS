@@ -44,7 +44,7 @@ export const Testimonial = async () => {
     <div className=' w-full'>
       <div className='container flex flex-col items-center py-10 md:px-10 '>
         <p className='text-lg font-bold md:text-3xl'>{`Don't just take our words`}</p>
-        <p className='texts-black pt-2 text-base font-normal text-black'>
+        <p className='pt-2 text-base font-normal text-gray_600'>
           3940+ Happy Dharti Users
         </p>
         <div className='mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
@@ -71,7 +71,7 @@ export const Testimonial = async () => {
                         <Image key={index} alt='user rating' src={starIcon} />
                       ))}
                     </div>
-                    <p className='my-6 line-clamp-3 overflow-hidden break-all text-base font-normal text-black'>
+                    <p className='my-6 line-clamp-3 overflow-hidden break-all text-base font-normal text-gray_600'>
                       {/* note: the description gets sliced up when the characters are larger than 100 words */}
                       {description}
                     </p>

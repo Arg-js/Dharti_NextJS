@@ -55,7 +55,7 @@ export const Footer = async () => {
               alt='dharti-logo'
             />
             {/* TODO max-w 60 ? */}
-            <h2 className='max-w-60 text-center text-sm font-normal text-black md:text-start dark:text-white'>
+            <h2 className='max-w-60 text-center text-sm font-normal text-gray_600 md:text-start dark:text-white'>
               {footerDetails.description}
             </h2>
           </div>
@@ -68,7 +68,7 @@ export const Footer = async () => {
                 return (
                   <li className='my-6' key={route.title}>
                     <Link href={route.path}>
-                      <h2 className='text-center text-sm font-semibold text-black md:text-start dark:text-white'>
+                      <h2 className='text-center text-sm font-semibold text-gray_600 md:text-start dark:text-white'>
                         {route.title}
                       </h2>
                       {/* TODO: last element margin Bottom reduction */}
@@ -87,14 +87,14 @@ export const Footer = async () => {
             {/* todo: the ul code is being repeated */}
             <ul className='font-medium text-gray-500 dark:text-gray-400'>
               <li className='my-6'>
-                <h2 className='text-sm font-semibold  text-black dark:text-white'>
+                <h2 className='text-sm font-semibold  text-gray_600 dark:text-white'>
                   {footerDetails?.getInTouch?.email}
                 </h2>
               </li>
             </ul>
             <ul className='font-medium text-gray-500 dark:text-gray-400'>
               <li className='my-6'>
-                <h2 className='text-sm font-bold  text-black dark:text-white'>
+                <h2 className='text-sm font-bold  text-gray_800 dark:text-white'>
                   {footerDetails?.getInTouch?.phoneNumber?.map(
                     (phoneNum, index) => {
                       return `${phoneNum} ${
@@ -132,7 +132,7 @@ export const Footer = async () => {
         </div>
         <hr />
         <div className='bg-muted px-4 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
-          <span className='text-sm font-normal text-black sm:text-center dark:text-gray-300'>
+          <span className='text-sm font-normal text-gray_500 sm:text-center dark:text-gray-300'>
             © Copyright {new Date().getFullYear()} . All Rights Reserved by
             Dharti
           </span>

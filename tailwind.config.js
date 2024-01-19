@@ -26,6 +26,10 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          50: 'hsl(var(--primary-50))',
+          400: 'hsl(var(--primary-400))',
+          500: 'hsl(var(--primary-500))',
+          600: 'hsl(var(--primary-600))',
         },
         primary_background: {
           DEFAULT: 'hsl(var(--primary_background))',
@@ -53,8 +57,32 @@ module.exports = {
         blue_gray500: {
           DEFAULT: 'hsl(var(--blue_gray500))',
         },
+        gray_50: {
+          DEFAULT: 'hsl(var(--gray-50))',
+        },
+        gray_100: {
+          DEFAULT: 'hsl(var(--gray-100))',
+        },
+        gray_200: {
+          DEFAULT: 'hsl(var(--gray-200))',
+        },
+        gray_300: {
+          DEFAULT: 'hsl(var(--gray-300))',
+        },
+        gray_400: {
+          DEFAULT: 'hsl(var(--gray-400))',
+        },
         gray_500: {
           DEFAULT: 'hsl(var(--gray-500))',
+        },
+        gray_600: {
+          DEFAULT: 'hsl(var(--gray-600))',
+        },
+        gray_700: {
+          DEFAULT: 'hsl(var(--gray-700))',
+        },
+        gray_800: {
+          DEFAULT: 'hsl(var(--gray-800))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

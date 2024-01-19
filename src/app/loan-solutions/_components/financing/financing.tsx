@@ -21,7 +21,7 @@ const Financing = ({
       <p className='mr-3 text-lg font-bold md:text-3xl'>
         {financeService.title}
       </p>
-      <p className='texts-black py-3 text-center text-base font-normal text-gray-500 lg:mb-10 xl:mb-20'>
+      <p className='py-3 text-center text-base font-normal text-gray_500 lg:mb-10 xl:mb-20'>
         {financeService.subTitle}
       </p>
       {/* ends */}

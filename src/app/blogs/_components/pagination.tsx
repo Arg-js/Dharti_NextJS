@@ -13,14 +13,11 @@ function PaginationButton({
     // todo: define colors in global config, ask prajjwal
     <button
       className={cn(
-        'grid h-12 w-12 place-items-center rounded-[50%] border border-[#E2E8F0] text-[#718096]',
-
+        'grid h-12 w-12 place-items-center rounded-[50%] border border-gray_200 text-gray_500',
         {
-          [`border-none bg-[#82AD66] text-white`]: variant === 'selected',
-        },
-        {
+          [`border-none bg-primary-400 text-white`]: variant === 'selected',
           // todo: use aspect ratio
-          [`mx-5 h-11 w-11 border-none bg-[#EFF5EC] font-bold text-[#82AD66]`]:
+          [`mx-5 h-11 w-11 border-none bg-primary-50 font-bold text-primary-600`]:
             variant === 'next',
         }
       )}
@@ -36,7 +33,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     // todo: ask
     .map((_, i) => ++i);
   return (
-    <div className='col-span-2 flex items-center justify-center gap-3'>
+    <div className='col-span-2 mt-8 flex items-center justify-center gap-3'>
       <PaginationButton variant='next'>
         <ChevronLeft />
       </PaginationButton>
