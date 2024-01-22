@@ -18,7 +18,6 @@ const getMissionDetails = async () => {
     return json.data;
   } catch (e) {
     console.error(e);
-    return [];
   }
 };
 
@@ -29,7 +28,6 @@ const getMissionList = async () => {
     return json.data;
   } catch (e) {
     console.error(e);
-    return [];
   }
 };
 
