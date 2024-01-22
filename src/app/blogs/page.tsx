@@ -4,7 +4,6 @@ import { getBlogs } from './blogs-service-api';
 
 export default async function Blogs() {
   const blogs = await getBlogs();
-  console.log('blogs', blogs);
   return (
     <>
       {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)}
