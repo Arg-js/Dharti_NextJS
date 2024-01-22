@@ -33,9 +33,16 @@ export interface ICategory {
 }
 
 const getBlogs = async () => {
-  const response = await fetch(api.blogs);
-  const json: DhartiResponse<IBlogDetails[]> = await response.json();
-  return json.data;
+  try {
+    const response = await fetch(api.blogs);
+    if (!response.ok) {
+      return [];
+    }
+    const json: DhartiResponse<IBlogDetails[]> = await response.json();
+    return json.data;
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 const getBlog = async (slug: string) => {
