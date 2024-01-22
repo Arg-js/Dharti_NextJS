@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getBlog, getBlogsCategory } from '../blogs-service-api';
 import { BlogCard } from '../_components/card';
+import parse from 'html-react-parser';
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug);
@@ -25,7 +26,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         />
       </div>
       <div className='mt-4 text-sm leading-8 text-gray_600'>
-        {blog.description}
+        {parse(blog.description)}
       </div>
       {!!blogsCategory.length && (
         <>
