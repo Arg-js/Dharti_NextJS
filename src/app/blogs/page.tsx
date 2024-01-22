@@ -7,7 +7,8 @@ export default async function Blogs() {
   console.log(blogs, 'blogs--->');
   return (
     <>
-      {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)}
+      {console.log(JSON.stringify(blogs))}
+      {/* {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)} */}
       <Pagination totalPages={5} />
     </>
   );
