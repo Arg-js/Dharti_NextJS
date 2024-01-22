@@ -34,14 +34,13 @@ export interface ICategory {
 
 const getBlogs = async () => {
   try {
-    console.log('api -------', api);
-
     const response = await fetch(api.blogs);
     if (!response.ok) {
       return [];
     }
-    const json: DhartiResponse<IBlogDetails[]> = await response.json();
-    return json.data;
+    const json: DhartiResponse<{ data: IBlogDetails[] }> =
+      await response.json();
+    return json.data.data;
   } catch (e) {
     console.error(e);
   }

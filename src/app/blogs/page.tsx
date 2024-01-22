@@ -4,11 +4,9 @@ import { getBlogs } from './blogs-service-api';
 
 export default async function Blogs() {
   const blogs = await getBlogs();
-  console.log(blogs, 'blogs--->');
   return (
     <>
-      {console.log(JSON.stringify(blogs))}
-      {/* {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)} */}
+      {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)}
       <Pagination totalPages={5} />
     </>
   );
