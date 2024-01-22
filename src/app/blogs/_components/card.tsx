@@ -11,6 +11,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { IBlogDetails } from '../blogs-service-api';
+import parse from 'html-react-parser';
 
 export type CardProps = {
   tag: string;
@@ -52,7 +53,7 @@ export function BlogCard({
           <Link href={`/blogs/${slug}`}>{title}</Link>
         </CardTitle>
         <CardDescription className='mt-4 line-clamp-3 text-left text-gray_600'>
-          {description}
+          {parse(description)}
         </CardDescription>
       </CardContent>
       <CardFooter className='mt-4 p-0 px-2'>
