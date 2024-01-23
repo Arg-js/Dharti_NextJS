@@ -21,7 +21,8 @@ const FilterPanel = async () => {
           Categories
         </span>
         <ul className='mb-2 mt-2 grid gap-3 text-sm text-gray_700'>
-          {categories.map((category) => (
+          {/* ask */}
+          {categories?.map((category) => (
             <li key={category.id}>
               <Link href={''}>{category.title}</Link>
             </li>
