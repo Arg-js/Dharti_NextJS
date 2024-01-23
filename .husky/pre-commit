@@ -11,6 +11,14 @@ yarn lint ||
           Run yarn lint, add changes and try commit again.';
     false;
 )
+
+# Check TS Standards
+yarn build ||
+(
+    echo '🔨❌ You have a problem in your code. Check linter 🔨❌
+          Run yarn lint, add changes and try commit again.';
+    false;
+)
  
 echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
  

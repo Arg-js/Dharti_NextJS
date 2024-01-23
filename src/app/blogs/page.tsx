@@ -6,7 +6,7 @@ export default async function Blogs() {
   const blogs = await getBlogs();
   return (
     <>
-      {/* {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)} */}
+      {blogs?.map(({ id, ...props }) => <BlogCard {...props} key={id} />)}
       <Pagination totalPages={5} />
     </>
   );

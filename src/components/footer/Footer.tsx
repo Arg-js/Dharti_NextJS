@@ -1,13 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  dhartiLogoIcon,
-  instaLogo,
-  facebookLogo,
-  githubLogo,
-  Xlogo,
-} from '@/assets/svg';
+import { instaLogo, facebookLogo, githubLogo, Xlogo } from '@/assets/svg';
 import { getFooterDetails } from './footer-service-api';
 const quickLinks = [
   {
@@ -27,20 +21,22 @@ const quickLinks = [
     path: '/blogs',
   },
 ];
+// todo: ask BE to provide the data
 const socialMedia = [
   { id: 0, logo: instaLogo },
   { id: 2, logo: facebookLogo },
   { id: 3, logo: Xlogo },
   { id: 1, logo: githubLogo },
 ];
-const footer = {
-  quickLinks: ['homepage', 'about', 'loan solutions', 'blogs'],
-  getInTouch: {
-    email: 'smth@email.com',
-    phoneNumber: ['015149911', '015109922'],
-  },
-  socialMedia: ['logo1Image', 'logo2Image', 'logo3Image', 'logo4Image'],
-};
+// const footer = {
+//   quickLinks: ['homepage', 'about', 'loan solutions', 'blogs'],
+//   getInTouch: {
+//     email: 'smth@email.com',
+//     phoneNumber: ['015149911', '015109922'],
+//   },
+//   socialMedia: ['logo1Image', 'logo2Image', 'logo3Image', 'logo4Image'],
+// };
+
 export const Footer = async () => {
   const footerDetails = await getFooterDetails();
   return (

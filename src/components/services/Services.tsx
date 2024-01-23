@@ -1,30 +1,7 @@
 import React from 'react';
 import Service from './Service';
-import { qualityIcon, resultIcon, salesIcon, supportIcon } from '@/assets/svg';
 import { getServices } from './services-service-api';
-
-const services = [
-  {
-    id: 0,
-    title: 'Support',
-    image: supportIcon,
-  },
-  {
-    id: 1,
-    title: 'Quality',
-    image: qualityIcon,
-  },
-  {
-    id: 2,
-    title: 'Sales',
-    image: salesIcon,
-  },
-  {
-    id: 3,
-    title: 'Result',
-    image: resultIcon,
-  },
-];
+// todo: find the svgs which are unused and remove them
 
 const Services = async () => {
   const services = await getServices();

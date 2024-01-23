@@ -1,23 +1,24 @@
-import { missionImage, tickIcon } from '@/assets/svg';
+import { tickIcon } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
 import { getMissionDetails, getMissionList } from './mission-service-api';
 
-const missionDetails = {
-  title: 'Our mission and Goal',
-  subTitle:
-    'Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam cursus. Consequat urna',
-  image: missionImage,
-  description: [
-    { id: 0, content: 'Lorem ipsum dolor sit amet consectetur.' },
-    { id: 1, content: 'Lorem ipsum dolor sit amet consectetur.' },
-    { id: 2, content: 'Lorem ipsum dolor sit amet consectetur.' },
-    { id: 3, content: 'Lorem ipsum dolor sit amet consectetur.' },
-    { id: 4, content: 'Lorem ipsum dolor sit amet consectetur.' },
-  ],
-};
+// const missionDetails = {
+//   title: 'Our mission and Goal',
+//   subTitle:
+//     'Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam cursus. Consequat urna',
+//   image: missionImage,
+//   description: [
+//     { id: 0, content: 'Lorem ipsum dolor sit amet consectetur.' },
+//     { id: 1, content: 'Lorem ipsum dolor sit amet consectetur.' },
+//     { id: 2, content: 'Lorem ipsum dolor sit amet consectetur.' },
+//     { id: 3, content: 'Lorem ipsum dolor sit amet consectetur.' },
+//     { id: 4, content: 'Lorem ipsum dolor sit amet consectetur.' },
+//   ],
+// };
 
 const OurMission = async () => {
+  // todo: make both of these come from same api like above ⬆️
   const missionDetails = await getMissionDetails();
   const missionList = await getMissionList();
   return (
