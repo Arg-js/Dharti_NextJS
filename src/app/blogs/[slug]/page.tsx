@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug);
-  const blogsCategory = await getBlogsCategory(blog.id);
+  const blogsCategory = await getBlogsCategory(blog?.id || '');
 
   return (
     <div>
@@ -14,21 +14,23 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           {/* TODO: Change this when we have categories in blog detail api */}
           Biotechnology
         </span>
-        <span className='text-sm font-semibold text-gray_400'>{blog.date}</span>
+        <span className='text-sm font-semibold text-gray_400'>
+          {blog?.date}
+        </span>
       </div>
-      <div className='extraBold32 mt-2 text-gray_700'>{blog.title}</div>
+      <div className='extraBold32 mt-2 text-gray_700'>{blog?.title}</div>
       <div className='relative mt-5 h-[479px] w-full overflow-hidden rounded-xl'>
         <Image
-          src={blog.image}
-          alt={`Image for ${blog.title}`}
+          src={blog?.image || ''}
+          alt={`Image for ${blog?.title}`}
           fill
           className='object-cover'
         />
       </div>
       <div className='mt-4 text-sm leading-8 text-gray_600'>
-        {parse(blog.description)}
+        {blog?.description && parse(blog.description)}
       </div>
-      {!!blogsCategory.length && (
+      {!!blogsCategory?.length && (
         <>
           <div className='mt-8'>
             <p className='bold20 text-primary'>Explore more blogs</p>

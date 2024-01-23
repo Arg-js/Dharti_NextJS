@@ -34,6 +34,8 @@ export interface ICategory {
 
 const getBlogs = async () => {
   try {
+    console.log('api -------', api);
+
     const response = await fetch(api.blogs);
     if (!response.ok) {
       return [];
@@ -47,29 +49,46 @@ const getBlogs = async () => {
 };
 
 const getBlog = async (slug: string) => {
-  const response = await fetch(api.blogBySlug + slug);
-  const json: DhartiResponse<IBlog> = await response.json();
-  return json.data;
+  try {
+    const response = await fetch(api.blogBySlug + slug);
+    const json: DhartiResponse<IBlog> = await response.json();
+    return json.data;
+  } catch (e) {
+    console.error('error-->', e);
+  }
 };
 
-const getBlogsCategory = async (blogId: number) => {
-  const response = await fetch(api.blogCategory + blogId);
-  const json: DhartiResponse<IBlogDetails[]> = await response.json();
-  return json.data;
+const getBlogsCategory = async (blogId: number | string) => {
+  try {
+    if (typeof blogId === 'string') return [];
+    const response = await fetch(api.blogCategory + blogId);
+    const json: DhartiResponse<IBlogDetails[]> = await response.json();
+    return json.data;
+  } catch (e) {
+    console.error('error-->', e);
+  }
 };
 
 const getTags = async () => {
-  const response = await fetch(api.tags);
-  if (response.ok) {
-    const json: DhartiResponse<ITags[]> = await response.json();
-    return json.data;
+  try {
+    const response = await fetch(api.tags);
+    if (response.ok) {
+      const json: DhartiResponse<ITags[]> = await response.json();
+      return json.data;
+    }
+    return undefined;
+  } catch (e) {
+    console.error('error-->', e);
   }
-  return undefined;
 };
 
 const getCategories = async () => {
-  const response = await fetch(api.category);
-  const json: DhartiResponse<ICategory[]> = await response.json();
-  return json.data;
+  try {
+    const response = await fetch(api.category);
+    const json: DhartiResponse<ICategory[]> = await response.json();
+    return json.data;
+  } catch (e) {
+    console.error('error-->', e);
+  }
 };
 export { getBlogs, getBlog, getBlogsCategory, getTags, getCategories };
