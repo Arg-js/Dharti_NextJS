@@ -7,8 +7,6 @@ import {
   endorsementIcon4,
   endorsementIcon5,
   endorsementIcon6,
-  partnerIcon1,
-  partnerIcon2,
 } from '@/assets/svg';
 import Image from 'next/image';
 import { getSupportingPartners } from '@/services/supporting-partners-api';

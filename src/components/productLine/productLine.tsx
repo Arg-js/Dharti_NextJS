@@ -1,26 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
-import { productLine1, productLine2, productLine3 } from '@/assets/svg';
 import { getProductLines } from './product-line-service-api';
 
-const products = [
-  {
-    title: 'Purchase Bill Financing',
-    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    image: productLine1,
-  },
-  {
-    title: 'Purchase Bill Financing',
-    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    image: productLine2,
-  },
-  {
-    title: 'Purchase Bill Financing',
-    desc: 'Input financing empowers agriculture with crucial resources, enhancing yields, productivity, and safeguarding investments.',
-    image: productLine3,
-  },
-];
+// todo: get this from BE as well
 const productDetails = {
   title: "Unlock Growth with Dharti's Product Line",
   subTitle:

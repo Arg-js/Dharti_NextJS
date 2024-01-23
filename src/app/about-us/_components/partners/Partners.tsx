@@ -1,4 +1,3 @@
-import { endorsementIcons } from '@/components/endorsed/Endorsed';
 import { getSupportingPartners } from '@/services/supporting-partners-api';
 import Image from 'next/image';
 import React from 'react';

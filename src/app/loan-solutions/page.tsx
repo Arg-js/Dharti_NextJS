@@ -7,7 +7,6 @@ import {
 } from '@/assets/svg';
 import HeroSection from '@/components/hero/HeroSection';
 import ProductLine from '@/components/productLine/productLine';
-import Image from 'next/image';
 import React from 'react';
 import Financing from './_components/financing/financing';
 

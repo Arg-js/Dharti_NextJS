@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
-import { starIcon, testimonialImage } from '@/assets/svg';
+import { starIcon } from '@/assets/svg';
 import { ITestimonial, getTestimonial } from './testimonial-service-api';
 import {
   Carousel,

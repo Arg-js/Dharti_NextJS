@@ -1,19 +1,19 @@
-import { aboutImage1, aboutImage2 } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
 import { getAbout } from './about-service-api';
 
-const aboutDharti = {
-  title: 'About Dharti tech',
-  images: [
-    { id: 0, image: aboutImage1 },
-    { id: 1, image: aboutImage2 },
-  ],
-  details:
-    'Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam cursus. Consequat urna pellentesque sit proin vitae molestie at a. Nunc lacinia tellus molestie vulputate lacus ullamcorper in. Condimentum metus gravida mauris ultrices pretium varius. Amet lobortis duis donec nunc convallis. Mauris urna sed sed metus cras egestas accumsan egestas sed. Id dui quisque non vel faucibus massa tincidunt sit fermentum. A a rutrum aliquam egestas porta non. Varius ultricies commodo nulla semper diam amet vitae scelerisque. Morbi sagittis dolor mauris massa sed volutpat. Semper id magna nullam quis sapien.',
-};
+// const aboutDharti = {
+//   title: 'About Dharti tech',
+//   images: [
+//     { id: 0, image: aboutImage1 },
+//     { id: 1, image: aboutImage2 },
+//   ],
+//   details:
+//     'Lorem ipsum dolor sit amet consectetur. A venenatis eu pretium quam cursus. Consequat urna pellentesque sit proin vitae molestie at a. Nunc lacinia tellus molestie vulputate lacus ullamcorper in. Condimentum metus gravida mauris ultrices pretium varius. Amet lobortis duis donec nunc convallis. Mauris urna sed sed metus cras egestas accumsan egestas sed. Id dui quisque non vel faucibus massa tincidunt sit fermentum. A a rutrum aliquam egestas porta non. Varius ultricies commodo nulla semper diam amet vitae scelerisque. Morbi sagittis dolor mauris massa sed volutpat. Semper id magna nullam quis sapien.',
+// };
 
 const About = async () => {
+  // todo: get images in array like above ⬆️.
   const about = await getAbout();
   return (
     // todo: my-20
