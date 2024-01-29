@@ -34,8 +34,6 @@ export interface ICategory {
 
 const getBlogs = async () => {
   try {
-    console.log('api -------', api);
-
     const response = await fetch(api.blogs);
     if (!response.ok) {
       return [];

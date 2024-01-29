@@ -32,6 +32,8 @@ import Xlogo from './Xlogo.svg';
 import githubLogo from './githubLogo.svg';
 import facebookLogo from './facebookLogo.svg';
 import instaLogo from './instaLogo.svg';
+import minusLogo from './minus.svg';
+import plusLogo from './plus.svg';
 
 export {
   dhartiLogoIcon,
@@ -68,4 +70,6 @@ export {
   facebookLogo,
   githubLogo,
   Xlogo,
+  minusLogo,
+  plusLogo,
 };
