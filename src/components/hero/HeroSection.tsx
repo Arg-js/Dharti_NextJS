@@ -10,7 +10,7 @@ const HeroSection = ({ title, image }: Record<Hero, string>) => {
         src={image}
         alt='background for about in hero section'
         // todo: don't use static value brightness-[30%]'
-        className='w-inherit h-28 object-cover brightness-[30%] md:h-[232px]'
+        className='h-28 w-full object-cover brightness-[30%] md:h-[232px]'
       />
       <div className='absolute top-0 flex h-full w-full items-center justify-center'>
         <div className=' flex flex-col items-center justify-center'>
