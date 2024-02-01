@@ -1,16 +1,22 @@
+'use client';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { ReactNode } from 'react';
+import { Dispatch, ReactNode, SetStateAction, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 function PaginationButton({
   children,
   variant = 'default',
+  page,
+  setCurrentPage,
 }: {
   children: ReactNode;
   variant?: 'next' | 'default' | 'selected';
+  page: number;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
 }) {
+  const router = useRouter();
   return (
-    // todo: define colors in global config, ask prajjwal
     <button
       className={cn(
         'grid h-12 w-12 place-items-center rounded-[50%] border border-gray_200 text-gray_500',
@@ -21,6 +27,10 @@ function PaginationButton({
             variant === 'next',
         }
       )}
+      onClick={() => {
+        router.push(`/blogs?page=${page}`);
+        setCurrentPage(page);
+      }}
     >
       {children}
     </button>
@@ -28,24 +38,40 @@ function PaginationButton({
 }
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
+  const searchParams = useSearchParams();
+  const selectedPage = searchParams.get('page');
+
+  const [currentPage, setCurrentPage] = useState(1);
   const pages = Array(totalPages)
     .fill(0)
     // todo: ask
     .map((_, i) => ++i);
   return (
     <div className='col-span-2 mt-8 flex items-center justify-center gap-3'>
-      <PaginationButton variant='next'>
+      <PaginationButton
+        setCurrentPage={setCurrentPage}
+        page={currentPage > 1 ? currentPage - 1 : 1}
+        variant='next'
+      >
         <ChevronLeft />
       </PaginationButton>
       {pages.map((page) => (
         <PaginationButton
+          setCurrentPage={setCurrentPage}
+          page={page}
           key={page}
-          variant={page === 1 ? 'selected' : 'default'}
+          variant={
+            selectedPage && +selectedPage === page ? 'selected' : 'default'
+          }
         >
           {page}
         </PaginationButton>
       ))}
-      <PaginationButton variant='next'>
+      <PaginationButton
+        setCurrentPage={setCurrentPage}
+        page={currentPage < totalPages ? currentPage + 1 : totalPages}
+        variant='next'
+      >
         <ChevronRight />
       </PaginationButton>
     </div>

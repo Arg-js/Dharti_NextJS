@@ -23,10 +23,10 @@ const quickLinks = [
 ];
 // todo: ask BE to provide the data
 const socialMedia = [
-  { id: 0, logo: instaLogo },
-  { id: 2, logo: facebookLogo },
-  { id: 3, logo: Xlogo },
-  { id: 1, logo: githubLogo },
+  { id: 'social_instagram', logo: instaLogo },
+  { id: 'social_facebook', logo: facebookLogo },
+  { id: 'social_twitter', logo: Xlogo },
+  { id: 'social_youtube', logo: githubLogo },
 ];
 // const footer = {
 //   quickLinks: ['homepage', 'about', 'loan solutions', 'blogs'],
@@ -39,6 +39,14 @@ const socialMedia = [
 
 export const Footer = async () => {
   const footerDetails = await getFooterDetails();
+
+  // todo: this function will be removed once BE changes its data format else move it to another folder
+  const socialMediaWithLinks = socialMedia.map((items) => {
+    const link = footerDetails.socialMedia.find(({ id }) => id === items.id)
+      ?.link;
+    return { ...items, link };
+  });
+
   return (
     <footer className=' w-full bg-muted dark:bg-gray-900'>
       <div className='container px-4 pt-8 lg:px-8'>
@@ -111,16 +119,18 @@ export const Footer = async () => {
               Social media
             </h2>
             <div className='flex gap-3 font-medium text-black dark:text-gray-400'>
-              {socialMedia.map(({ logo, id }) => {
+              {socialMediaWithLinks.map(({ logo, id, link }) => {
                 return (
-                  <Image
-                    src={logo}
-                    alt={'logo'}
-                    height={28}
-                    width={28}
-                    key={id}
-                    className='cursor-pointer'
-                  />
+                  <Link href={`https://www.${link}/`} key={id}>
+                    <Image
+                      src={logo}
+                      alt={'logo'}
+                      height={28}
+                      width={28}
+                      key={id}
+                      className='cursor-pointer'
+                    />
+                  </Link>
                 );
               })}
             </div>
