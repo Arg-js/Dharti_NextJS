@@ -21,7 +21,7 @@ export const Header = () => {
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
           <Link href={`/loan-solutions`}>
-            <Button className='button-hover mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
+            <Button className='button-hover mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200 hover:bg-primary'>
               Explore our Solution
             </Button>
           </Link>
@@ -35,8 +35,6 @@ export const Header = () => {
           />
         </div>
       </div>
-      {/* todo: use flex and try */}
-      {/* todo: why margin bottom does not work here */}
       <div className='w-full xl:absolute xl:bottom-0 xl:translate-y-1/2'>
         <Services />
       </div>

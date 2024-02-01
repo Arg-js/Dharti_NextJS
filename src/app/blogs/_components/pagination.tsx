@@ -22,8 +22,7 @@ function PaginationButton({
         'grid h-12 w-12 place-items-center rounded-[50%] border border-gray_200 text-gray_500',
         {
           [`border-none bg-primary-400 text-white`]: variant === 'selected',
-          // todo: use aspect ratio
-          [`mx-5 h-11 w-11 border-none bg-primary-50 font-bold text-primary-600`]:
+          [`mx-5 aspect-square h-11 border-none bg-primary-50 font-bold text-primary-600`]:
             variant === 'next',
         }
       )}
@@ -44,7 +43,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const [currentPage, setCurrentPage] = useState(1);
   const pages = Array(totalPages)
     .fill(0)
-    // todo: ask
     .map((_, i) => ++i);
   return (
     <div className='col-span-2 mt-8 flex items-center justify-center gap-3'>

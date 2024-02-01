@@ -119,7 +119,6 @@
     @apply text-sm font-normal;
   }
 
-  /* todo: this variant might be default and not required */
   .normal16 {
     @apply text-base font-normal;
   }
@@ -133,7 +132,7 @@
     -webkit-box-orient: vertical;
   }
 
-  .button-hover:hover {
+  .button-hover:active {
     transform: translateX(-4px) translateY(4px); /* Move left and down on hover */
     box-shadow: none; /* Remove shadow on hover */
   }

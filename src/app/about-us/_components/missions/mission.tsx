@@ -18,7 +18,7 @@ import './mission.css';
 // };
 
 const OurMission = async () => {
-  // todo: make both of these come from same api like above ⬆️
+  // todoBE: make both of these come from same api like above ⬆️
   const missionDetails = await getMissionDetails();
   const missionList = await getMissionList();
   return (
@@ -35,7 +35,7 @@ const OurMission = async () => {
         <h1 className='extraBold32 mb-3'>
           {missionDetails?.our_mission_title}
         </h1>
-        <p className='normal16 text-foundation_gray_B200'>
+        <p className='text-foundation_gray_B200'>
           {missionDetails?.our_mission_description}
         </p>
         <ul className='mt-7'>

@@ -5,13 +5,14 @@ import parse from 'html-react-parser';
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug);
+  console.log('blog', blog);
   const blogsCategory = await getBlogsCategory(blog?.id || '');
 
   return (
     <div>
       <div className='mt-4 flex w-full justify-between'>
         <span className='text-xs font-bold uppercase text-secondary'>
-          {/* TODO: Change this when we have categories in blog detail api */}
+          {/* todoBE: Change this when we have categories in blog detail api */}
           Biotechnology
         </span>
         <span className='text-sm font-semibold text-gray_400'>

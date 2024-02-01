@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
 import { getProductLines } from './product-line-service-api';
 
-// todo: get this from BE as well
+// todoBE: get this from BE as well
 const productDetails = {
   title: "Unlock Growth with Dharti's Product Line",
   subTitle:
@@ -13,22 +13,18 @@ const ProductLine = async () => {
   const productLines = await getProductLines();
   const productLine = productLines.slice(0, 3);
   return (
-    // todo: pb and pt not equal
     <div className='w-full md:pt-10 lg:pb-14'>
       <div className='container flex flex-col items-center py-12 md:py-2'>
         <p className='text-lg font-bold md:text-3xl'>{productDetails.title}</p>
         <p className='py-3 text-base font-normal text-gray_600'>
           {productDetails.subTitle}
         </p>
-        {/* todo: grid i want the content to use full width */}
-        {/* currently i am passing width in image 419px */}
         <div className='grid grid-cols-1 gap-8 pt-10 lg:grid-cols-2 xl:grid-cols-3'>
           {productLine.map((product, index) => {
             return (
-              // todo: add border radius to the card
-              <Card key={index} className='text-card-foreground shadow-sm'>
+              <Card key={index} className='text-card-foreground shadow-md'>
                 <CardHeader className='p-0'>
-                  <div className='relative h-72 w-[419px] overflow-hidden rounded-t-md'>
+                  <div className='relative h-72 w-full overflow-hidden rounded-t-md'>
                     <Image
                       src={product.image}
                       alt='testimonialPerson'
