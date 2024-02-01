@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { instaLogo, facebookLogo, githubLogo, Xlogo } from '@/assets/svg';
 import { getFooterDetails } from './footer-service-api';
+
+const listText = 'font-medium text-gray-500 dark:text-gray-400';
 const quickLinks = [
   {
     title: 'Homepage',
@@ -67,7 +69,7 @@ export const Footer = async () => {
             <h2 className='text-base font-semibold  text-primary '>
               Quick Links
             </h2>
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               {quickLinks.map((route) => {
                 return (
                   <li className='my-6' key={route.title}>
@@ -88,17 +90,16 @@ export const Footer = async () => {
               Get in Touch
             </h2>
 
-            {/* todo: the ul code is being repeated */}
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               <li className='my-6'>
-                <h2 className='text-sm font-semibold  text-gray_600 dark:text-white'>
+                <h2 className='text-sm font-semibold text-gray_600 dark:text-white'>
                   {footerDetails?.getInTouch?.email}
                 </h2>
               </li>
             </ul>
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               <li className='my-6'>
-                <h2 className='text-sm font-bold  text-gray_800 dark:text-white'>
+                <h2 className='text-sm font-bold text-gray_800 dark:text-white'>
                   {footerDetails?.getInTouch?.phoneNumber?.map(
                     (phoneNum, index) => {
                       return `${phoneNum} ${
@@ -124,7 +125,7 @@ export const Footer = async () => {
                   <Link href={`https://www.${link}/`} key={id}>
                     <Image
                       src={logo}
-                      alt={'logo'}
+                      alt={id}
                       height={28}
                       width={28}
                       key={id}

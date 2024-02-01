@@ -10,23 +10,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../ui/carousel';
-
-// todo: move this somewhere else
-function createSubarrays<T>(originalArray: T[], chunkSize: number) {
-  var resultArray = [];
-
-  for (var i = 0; i < originalArray.length; i += chunkSize) {
-    var subarray = originalArray.slice(i, i + chunkSize);
-    resultArray.push(subarray);
-  }
-
-  return resultArray;
-}
+import { createSubArrays } from './utlis';
 
 export const Testimonial = async () => {
   const testimonialData = await getTestimonial();
   let testimonialDataChunk =
-    testimonialData && createSubarrays<ITestimonial>(testimonialData, 4);
+    testimonialData && createSubArrays<ITestimonial>(testimonialData, 4);
   return (
     <div className=' w-full'>
       <div className='container flex flex-col items-center py-10 md:px-10 '>
@@ -45,9 +34,7 @@ export const Testimonial = async () => {
                         return (
                           <Card key={id}>
                             <CardHeader>
-                              {/* ask */}
                               <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
-                                {/* todo: move classname inside the image */}
                                 <Image
                                   src={image}
                                   alt='testimonialPerson'

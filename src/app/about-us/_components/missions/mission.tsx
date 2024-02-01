@@ -1,7 +1,7 @@
-import { tickIcon } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
 import { getMissionDetails, getMissionList } from './mission-service-api';
+import './mission.css';
 
 // const missionDetails = {
 //   title: 'Our mission and Goal',
@@ -41,12 +41,8 @@ const OurMission = async () => {
         <ul className='mt-7'>
           {missionList?.map(({ list, id }) => {
             return (
-              <li key={id} className='my-5 flex h-8 items-center space-x-3'>
-                <div className='flex aspect-square h-8 justify-center rounded-full bg-primary_background'>
-                  {/* todo: check if the image can take above class name */}
-                  <Image alt='list icon' src={tickIcon} />
-                </div>
-                <p className='text-sm font-medium text-gray_600'>{list}</p>
+              <li key={id} className=' my-5 flex h-8 items-center space-x-3 '>
+                <p className='list text-sm font-medium text-gray_600'>{list}</p>
               </li>
             );
           })}

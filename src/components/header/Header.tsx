@@ -5,7 +5,6 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// todo: change the name of this component
 export const Header = () => {
   return (
     <div className='relative bg-primary_background'>

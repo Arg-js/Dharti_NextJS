@@ -30,8 +30,7 @@ const About = async () => {
         <Image
           width={'411'}
           height={'319'}
-          // todo: make this dynamic
-          alt='about-us-image-1'
+          alt={`about-us-image-1`}
           // todo: but i always get the images
           src={about?.about_us_image ?? ''}
           className='relative top-[20%] z-10 w-72 rounded-[20px] sm:top-[34%] sm:w-[411px] lg:absolute'
