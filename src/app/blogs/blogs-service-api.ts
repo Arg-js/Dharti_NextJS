@@ -8,7 +8,7 @@ export interface IBlogDetails {
   description: string;
   date: string;
   slug: string;
-  category: Category;
+  category: Item;
 }
 
 // TODO: Might need to change later since category might get added to IBlogDetails
@@ -18,7 +18,7 @@ export type IBlog = Omit<IBlogDetails, 'category'> & {
   };
 };
 
-export interface Category {
+export interface Item {
   id: number;
   title: string;
 }
@@ -26,21 +26,62 @@ export interface Category {
 export interface ITags {
   id: number;
   tag: string;
-}
-export interface ICategory {
-  id: number;
-  title: string;
+  slug: string;
 }
 
-const getBlogs = async () => {
+export interface ICategory extends Item {
+  slug: string;
+}
+
+export interface ILink {
+  url?: string;
+  label: string;
+  active: boolean;
+}
+
+export interface IPaginatedResponse {
+  current_page: number;
+  first_page_url: string;
+  from: number;
+  last_page: number;
+  last_page_url: string;
+  links: ILink[];
+  next_page_url: string;
+  path: string;
+  per_page: number;
+  prev_page_url: string;
+  to: number;
+  total: number;
+}
+
+const getBlogs = async ({
+  page,
+  search,
+  category,
+  tag,
+}: {
+  page: number;
+  search: string;
+  category: string;
+  tag: string;
+}) => {
   try {
-    const response = await fetch(api.blogs);
-    if (!response.ok) {
-      return [];
-    }
-    const json: DhartiResponse<{ data: IBlogDetails[] }> =
-      await response.json();
-    return json.data.data;
+    const response = await fetch(
+      `${api.blogs}/?page=${page ?? '1'}&search=${search ?? ''}&tag_slug=${
+        tag ?? ''
+      }&category_slug=${category ?? ''}`
+    );
+    // todo: handle error condition
+    // if (!response.ok) {
+    //   return {};
+    // }
+    const json: DhartiResponse<
+      {
+        data: IBlogDetails[];
+      } & IPaginatedResponse
+    > = await response.json();
+
+    return json.data;
   } catch (e) {
     console.error(e);
   }
@@ -70,11 +111,8 @@ const getBlogsCategory = async (blogId: number | string) => {
 const getTags = async () => {
   try {
     const response = await fetch(api.tags);
-    if (response.ok) {
-      const json: DhartiResponse<ITags[]> = await response.json();
-      return json.data;
-    }
-    return undefined;
+    const json: DhartiResponse<ITags[]> = await response.json();
+    return json.data;
   } catch (e) {
     console.error('error-->', e);
   }
@@ -89,4 +127,5 @@ const getCategories = async () => {
     console.error('error-->', e);
   }
 };
+
 export { getBlogs, getBlog, getBlogsCategory, getTags, getCategories };

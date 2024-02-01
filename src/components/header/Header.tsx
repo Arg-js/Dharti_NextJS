@@ -22,7 +22,7 @@ export const Header = () => {
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
           <Link href={`/loan-solutions`}>
-            <Button className='mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
+            <Button className='button-hover mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200'>
               Explore our Solution
             </Button>
           </Link>

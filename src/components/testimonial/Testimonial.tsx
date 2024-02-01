@@ -78,7 +78,7 @@ export const Testimonial = async () => {
                                   {name}
                                 </p>
                                 <p className='text-base font-medium text-blue_gray500'>
-                                  {category.title}
+                                  {category?.title}
                                 </p>
                               </div>
                             </CardContent>
