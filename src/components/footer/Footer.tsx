@@ -45,7 +45,7 @@ export const Footer = async () => {
 
   // todoBE: this function will be removed once BE changes its data format else move it to another folder
   const socialMediaWithLinks = socialMedia.map((items) => {
-    const link = footerDetails.socialMedia.find(({ id }) => id === items.id)
+    const link = footerDetails?.socialMedia.find(({ id }) => id === items.id)
       ?.link;
     return { ...items, link };
   });

@@ -16,29 +16,30 @@ const Endorsed = async () => {
     >
       <div className='flex flex-1 flex-col '>
         <div className='container relative my-5 flex flex-nowrap gap-5 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-[30dvw]'>
-          {new Array(2).fill(null).map((_, index) => {
-            return (
+          {/* {new Array(2).fill(null).map((_, index) => { */}
+          {/* return ( */}
+          <div
+            // key={index}
+            // className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-5 '
+            className='flex items-center justify-around justify-items-center gap-5 '
+          >
+            {/* todo: auto width fit */}
+            {supportingPartnersGrp1?.map(({ id, image }) => (
               <div
-                key={index}
-                className='flex animate-marquee-infinite items-center justify-around justify-items-center gap-5 '
+                className='relative aspect-[3/2] h-[68px] mix-blend-darken'
+                key={id}
               >
-                {/* todo: auto width fit */}
-                {supportingPartnersGrp1?.map(({ id, image }) => (
-                  <div
-                    className='relative aspect-[3/2] h-[68px] mix-blend-darken'
-                    key={id}
-                  >
-                    <Image
-                      src={image}
-                      alt='endorsementIcon'
-                      objectFit='contain'
-                      fill
-                    />
-                  </div>
-                ))}
+                <Image
+                  src={image}
+                  alt='endorsementIcon'
+                  objectFit='contain'
+                  fill
+                />
               </div>
-            );
-          })}
+            ))}
+          </div>
+          {/* ); */}
+          {/* })} */}
         </div>
         <div className='flex gap-2 md:gap-8'>
           {supportingPartnersGrp2?.map(({ id, image }) => (
