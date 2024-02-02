@@ -45,7 +45,7 @@ export const Footer = async () => {
 
   // todoBE: this function will be removed once BE changes its data format else move it to another folder
   const socialMediaWithLinks = socialMedia.map((items) => {
-    const link = footerDetails.socialMedia.find(({ id }) => id === items.id)
+    const link = footerDetails?.socialMedia.find(({ id }) => id === items.id)
       ?.link;
     return { ...items, link };
   });
@@ -56,14 +56,14 @@ export const Footer = async () => {
         <div className='my-6 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-4 md:items-start'>
           <div className='flex flex-col items-center gap-6 md:items-start'>
             <Image
-              src={footerDetails.logo}
+              src={footerDetails?.logo || ''}
               width={107}
               height={76}
               alt='dharti-logo'
             />
             {/* TODO: max-w 60 ? */}
             <h2 className='max-w-60 text-center text-sm font-normal text-gray_600 md:text-start dark:text-white'>
-              {footerDetails.description}
+              {footerDetails?.description}
             </h2>
           </div>
           <div>
