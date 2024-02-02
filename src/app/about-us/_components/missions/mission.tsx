@@ -1,7 +1,7 @@
-import { tickIcon } from '@/assets/svg';
 import Image from 'next/image';
 import React from 'react';
 import { getMissionDetails, getMissionList } from './mission-service-api';
+import './mission.css';
 
 // const missionDetails = {
 //   title: 'Our mission and Goal',
@@ -18,7 +18,7 @@ import { getMissionDetails, getMissionList } from './mission-service-api';
 // };
 
 const OurMission = async () => {
-  // todo: make both of these come from same api like above ⬆️
+  // todoBE: make both of these come from same api like above ⬆️
   const missionDetails = await getMissionDetails();
   const missionList = await getMissionList();
   return (
@@ -35,18 +35,14 @@ const OurMission = async () => {
         <h1 className='extraBold32 mb-3'>
           {missionDetails?.our_mission_title}
         </h1>
-        <p className='normal16 text-foundation_gray_B200'>
+        <p className='text-foundation_gray_B200'>
           {missionDetails?.our_mission_description}
         </p>
         <ul className='mt-7'>
           {missionList?.map(({ list, id }) => {
             return (
-              <li key={id} className='my-5 flex h-8 items-center space-x-3'>
-                <div className='flex aspect-square h-8 justify-center rounded-full bg-primary_background'>
-                  {/* todo: check if the image can take above class name */}
-                  <Image alt='list icon' src={tickIcon} />
-                </div>
-                <p className='text-sm font-medium text-gray_600'>{list}</p>
+              <li key={id} className=' my-5 flex h-8 items-center space-x-3 '>
+                <p className='list text-sm font-medium text-gray_600'>{list}</p>
               </li>
             );
           })}

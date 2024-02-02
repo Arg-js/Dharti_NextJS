@@ -7,7 +7,6 @@ const FilterPanel = async () => {
   const tags = await getTags();
   // QUERIES ENDS
 
-  // todo: help me rename this
   return <FilterPanelBody tags={tags} categories={categories} />;
 };
 
