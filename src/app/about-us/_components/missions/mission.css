@@ -1,0 +1,12 @@
+.list::before {
+  content: url('../../../../assets/svg/tick.svg');
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  background: hsl(var(--primary_background));
+  text-align: center;
+  padding-top: 4px;
+  background-size: contain;
+  margin-right: 10px;
+}

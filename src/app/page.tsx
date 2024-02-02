@@ -4,11 +4,8 @@ import ProductLine from '@/components/productLine/productLine';
 import Achievements from '@/components/achievements/Achievements';
 import About from '@/components/about/About';
 import { Header } from '@/components/header/Header';
-// todo: make home page different component
 export default function Home() {
   return (
-    // ask
-    // <main className='flex min-h-screen flex-col items-center justify-center text-2xl'>
     <main>
       <Header />
       {/* note: (206(64+142 ie. height of card/2)) */}

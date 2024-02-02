@@ -43,7 +43,7 @@ export function BlogCard({
         </div>
         <div className='mt-4 flex w-full justify-between'>
           <span className='text-xs font-bold uppercase text-secondary'>
-            {category.title}
+            {category?.title}
           </span>
           <span className='text-sm font-semibold text-gray_400'>{date}</span>
         </div>

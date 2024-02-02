@@ -3,6 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { instaLogo, facebookLogo, githubLogo, Xlogo } from '@/assets/svg';
 import { getFooterDetails } from './footer-service-api';
+import { getComma } from './utils';
+
+const listText = 'font-medium text-gray-500 dark:text-gray-400';
 const quickLinks = [
   {
     title: 'Homepage',
@@ -21,12 +24,12 @@ const quickLinks = [
     path: '/blogs',
   },
 ];
-// todo: ask BE to provide the data
+// todoBE: ask BE to provide the data
 const socialMedia = [
-  { id: 0, logo: instaLogo },
-  { id: 2, logo: facebookLogo },
-  { id: 3, logo: Xlogo },
-  { id: 1, logo: githubLogo },
+  { id: 'social_instagram', logo: instaLogo },
+  { id: 'social_facebook', logo: facebookLogo },
+  { id: 'social_twitter', logo: Xlogo },
+  { id: 'social_youtube', logo: githubLogo },
 ];
 // const footer = {
 //   quickLinks: ['homepage', 'about', 'loan solutions', 'blogs'],
@@ -39,6 +42,14 @@ const socialMedia = [
 
 export const Footer = async () => {
   const footerDetails = await getFooterDetails();
+
+  // todoBE: this function will be removed once BE changes its data format else move it to another folder
+  const socialMediaWithLinks = socialMedia.map((items) => {
+    const link = footerDetails.socialMedia.find(({ id }) => id === items.id)
+      ?.link;
+    return { ...items, link };
+  });
+
   return (
     <footer className=' w-full bg-muted dark:bg-gray-900'>
       <div className='container px-4 pt-8 lg:px-8'>
@@ -50,7 +61,7 @@ export const Footer = async () => {
               height={76}
               alt='dharti-logo'
             />
-            {/* TODO max-w 60 ? */}
+            {/* TODO: max-w 60 ? */}
             <h2 className='max-w-60 text-center text-sm font-normal text-gray_600 md:text-start dark:text-white'>
               {footerDetails?.description}
             </h2>
@@ -59,7 +70,7 @@ export const Footer = async () => {
             <h2 className='text-base font-semibold  text-primary '>
               Quick Links
             </h2>
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               {quickLinks.map((route) => {
                 return (
                   <li className='my-6' key={route.title}>
@@ -67,7 +78,6 @@ export const Footer = async () => {
                       <h2 className='text-center text-sm font-semibold text-gray_600 md:text-start dark:text-white'>
                         {route.title}
                       </h2>
-                      {/* TODO: last element margin Bottom reduction */}
                     </Link>
                   </li>
                 );
@@ -80,26 +90,22 @@ export const Footer = async () => {
               Get in Touch
             </h2>
 
-            {/* todo: the ul code is being repeated */}
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               <li className='my-6'>
-                <h2 className='text-sm font-semibold  text-gray_600 dark:text-white'>
+                <h2 className='text-sm font-semibold text-gray_600 dark:text-white'>
                   {footerDetails?.getInTouch?.email}
                 </h2>
               </li>
             </ul>
-            <ul className='font-medium text-gray-500 dark:text-gray-400'>
+            <ul className={listText}>
               <li className='my-6'>
-                <h2 className='text-sm font-bold  text-gray_800 dark:text-white'>
+                <h2 className='text-sm font-bold text-gray_800 dark:text-white'>
                   {footerDetails?.getInTouch?.phoneNumber?.map(
                     (phoneNum, index) => {
-                      return `${phoneNum} ${
-                        // todo: refactor this logic once BE gives data
-                        footerDetails?.getInTouch?.phoneNumber?.length - 1 >
-                        index
-                          ? ','
-                          : ''
-                      } `;
+                      return `${phoneNum} ${getComma({
+                        length: footerDetails?.getInTouch?.phoneNumber?.length,
+                        index,
+                      })} `;
                     }
                   )}
                 </h2>
@@ -111,22 +117,23 @@ export const Footer = async () => {
               Social media
             </h2>
             <div className='flex gap-3 font-medium text-black dark:text-gray-400'>
-              {socialMedia.map(({ logo, id }) => {
+              {socialMediaWithLinks.map(({ logo, id, link }) => {
                 return (
-                  <Image
-                    src={logo}
-                    alt={'logo'}
-                    height={28}
-                    width={28}
-                    key={id}
-                    className='cursor-pointer'
-                  />
+                  <Link href={`https://www.${link}/`} key={id}>
+                    <Image
+                      src={logo}
+                      alt={id}
+                      height={28}
+                      width={28}
+                      key={id}
+                      className='cursor-pointer'
+                    />
+                  </Link>
                 );
               })}
             </div>
           </div>
         </div>
-        {/* todo: margin in HR does not work */}
         <hr />
         <div className='bg-muted px-4 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
           <span className='text-sm font-normal text-gray_500 sm:text-center dark:text-gray-300'>

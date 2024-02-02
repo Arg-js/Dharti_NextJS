@@ -119,7 +119,6 @@
     @apply text-sm font-normal;
   }
 
-  /* todo: this variant might be default and not required */
   .normal16 {
     @apply text-base font-normal;
   }
@@ -131,5 +130,25 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+  }
+
+  .button-hover:active {
+    transform: translateX(-4px) translateY(4px); /* Move left and down on hover */
+    box-shadow: none; /* Remove shadow on hover */
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @layer utilities {
+    .animate-marquee {
+      animation: marquee 15s linear infinite;
+    }
   }
 }

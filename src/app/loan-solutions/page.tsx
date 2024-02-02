@@ -10,7 +10,7 @@ import ProductLine from '@/components/productLine/productLine';
 import React from 'react';
 import Financing from './_components/financing/financing';
 
-// todo: move this ts somewhere else during api consumption
+// todoBE: move this ts somewhere else during api consumption
 export interface IPurchaseBillFinance {
   image: string;
   title: string;
@@ -69,10 +69,15 @@ const page = () => {
     <main className='flex min-h-screen flex-col items-center justify-center '>
       <HeroSection title='Loan Solutions' image={heroSectionTractorBg} />
       <ProductLine />
-      {/* todo: add a loop */}
-      <Financing financeService={purchaseBillFinance} />
-      <Financing financeService={purchaseBillFinance} variant={'REVERSE'} />
-      <Financing financeService={purchaseBillFinance} />
+      {new Array(3).fill(null).map((_, index) => {
+        return (
+          <Financing
+            key={index}
+            financeService={purchaseBillFinance}
+            variant={(index + 1) % 2 === 0 ? 'DEFAULT' : 'REVERSE'}
+          />
+        );
+      })}
     </main>
   );
 };
