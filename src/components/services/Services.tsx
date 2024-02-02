@@ -1,7 +1,6 @@
 import React from 'react';
 import Service from './Service';
 import { getServices } from './services-service-api';
-// todo: find the svgs which are unused and remove them
 
 const Services = async () => {
   const services = await getServices();

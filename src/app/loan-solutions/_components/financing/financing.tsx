@@ -8,7 +8,7 @@ const Financing = ({
   variant,
 }: {
   financeService: IPurchaseBillFinance;
-  variant?: 'REVERSE';
+  variant?: 'REVERSE' | 'DEFAULT';
 }) => {
   return (
     <div
