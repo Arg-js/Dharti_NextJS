@@ -41,7 +41,7 @@ const OurMission = async () => {
         <ul className='mt-7'>
           {missionList?.map(({ list, id }) => {
             return (
-              <li key={id} className=' my-5 flex h-8 items-center space-x-3 '>
+              <li key={id} className=' my-3 flex items-center space-x-3 '>
                 <p className='list text-sm font-medium text-gray_600'>{list}</p>
               </li>
             );
