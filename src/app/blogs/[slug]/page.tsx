@@ -5,7 +5,6 @@ import parse from 'html-react-parser';
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug);
-  console.log('blog', blog);
   const blogsCategory = await getBlogsCategory(blog?.id || '');
 
   return (

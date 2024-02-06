@@ -20,7 +20,7 @@ export const Navbar = () => {
   const isActive = (path: NavPath) => pathName === path;
   return (
     <nav className=' sticky top-0 z-20 bg-white'>
-      <div className='container   flex items-center justify-between bg-white py-2.5'>
+      <div className='container flex items-center justify-between bg-white py-2.5'>
         <Link href={'/'}>
           <Image
             src={dhartiLogoIcon}
@@ -30,7 +30,7 @@ export const Navbar = () => {
           />
         </Link>
 
-        <ul className=' hidden gap-10 py-2.5 md:flex'>
+        <ul className='hidden gap-10 py-2.5 md:flex'>
           {NavbarItems.map((item) => (
             <li
               key={item.name}

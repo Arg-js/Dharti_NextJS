@@ -19,9 +19,13 @@ export interface SocialMedum {
 }
 
 const getFooterDetails = async () => {
-  const response = await fetch(api.footer);
-  const json: DhartiResponse<IFooter> = await response.json();
-  return json.data;
+  try {
+    const response = await fetch(api.footer);
+    const json: DhartiResponse<IFooter> = await response.json();
+    return json.data;
+  } catch (e) {
+    console.log('error-->', e);
+  }
 };
 
 export { getFooterDetails };
