@@ -30,7 +30,7 @@ export const Testimonial = async () => {
                     className='sm:basis-1/2 lg:basis-1/3 xl:basis-1/4'
                   >
                     <div className='mt-3 grid grid-cols-1 gap-6'>
-                      <Card key={id}>
+                      <Card>
                         <CardHeader>
                           <div className='relative aspect-square h-48 overflow-hidden rounded-md'>
                             <Image
