@@ -20,13 +20,16 @@ export const Header = () => {
             Unlocking Opportunities, Optimizing Cash Flow, and Empowering
             Businesses Through Innovative Supply Chain Financing Solutions
           </div>
-          <Link href={`/loan-solutions`}>
+          <Link
+            href={`/loan-solutions`}
+            className='flex justify-center md:justify-start'
+          >
             <Button className='button-hover mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200 hover:bg-primary'>
               Explore our Solution
             </Button>
           </Link>
         </div>
-        <div>
+        <div className='hidden lg:block'>
           <Image
             alt={'map of India'}
             height={562}

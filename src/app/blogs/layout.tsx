@@ -9,7 +9,9 @@ export default function BlogLayout({ children }: PropsWithChildren) {
       <HeroSection title='Blogs' image={heroSectionBlogBg} />
       <main className='container mb-20'>
         <div className={`grid grid-cols-card gap-8`}>
-          <div className={`col-span-2 mt-6 grid grid-cols-card gap-6`}>
+          <div
+            className={` mt-6 grid grid-cols-card justify-items-center gap-6 md:col-span-2`}
+          >
             {children}
           </div>
           <FilterPanel />

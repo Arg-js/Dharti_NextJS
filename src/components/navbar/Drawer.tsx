@@ -14,11 +14,9 @@ export function Drawer() {
       <DrawerTrigger asChild>
         <Button variant='outline'>
           <div>
-            {new Array(3).fill(null).map((_, index) => {
-              return (
-                <hr key={index} className='mb-1 w-5 border border-gray-300' />
-              );
-            })}
+            {new Array(3).fill(null).map((_, index) => (
+              <hr key={index} className='mb-1 w-5 border border-gray-300' />
+            ))}
           </div>
         </Button>
       </DrawerTrigger>
