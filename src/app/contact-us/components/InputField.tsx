@@ -26,6 +26,11 @@ export const InputField = (
         onChange={onChange}
         {...rest}
       />
+      {/* {error && (
+        <label htmlFor={name} className='pb-2 text-sm font-medium'>
+          {label}
+        </label>
+      )} */}
     </div>
   );
 };
