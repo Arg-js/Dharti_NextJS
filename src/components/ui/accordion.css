@@ -1,3 +1,6 @@
+.accordion-trigger {
+  word-break: break-all;
+}
 .accordion-trigger::after {
   content: '';
   display: inline-block;
@@ -6,6 +9,7 @@
   background-image: url('../../assets/svg/plus.svg'); /* Path to image */
   background-size: cover;
   margin-left: 8px;
+  padding-right: 15px;
 }
 
 .accordion-trigger[data-state='open']::after {

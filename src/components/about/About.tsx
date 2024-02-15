@@ -17,14 +17,14 @@ const About = async () => {
           alt={`about-us-image-1`}
           // todo: but i always get the images
           src={about?.about_us_image ?? ''}
-          className='relative top-[20%] z-10 w-72 rounded-[20px] sm:top-[34%] sm:w-[411px] lg:absolute'
+          className='relative top-[20%] z-10 w-56 rounded-[20px] sm:top-[34%] sm:w-[411px] lg:absolute'
         />
         <Image
           width={'411'}
           height={'319'}
           alt='about-us-image-2'
           src={about?.about_us_image_two ?? ''}
-          className='absolute right-4 w-72 rounded-lg sm:right-20 sm:w-[411px] lg:absolute'
+          className='absolute right-4 w-56 rounded-lg sm:right-20 sm:w-[411px] lg:absolute'
         />
       </div>
     </div>

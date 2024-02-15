@@ -1,14 +1,15 @@
+'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Items = [
   { name: 'Home', path: '/' },
-  { name: 'About us', path: '/about-us' },
-  { name: 'Loan Solutions', path: '/loan-solutions' },
-  { name: 'Blogs', path: '/blogs' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'Contact Us', path: '/contact-us' },
+  { name: 'About us', path: '/about-us/' },
+  { name: 'Loan Solutions', path: '/loan-solutions/' },
+  { name: 'Blogs', path: '/blogs/' },
+  { name: 'FAQ', path: '/faq/' },
+  { name: 'Contact Us', path: '/contact-us/' },
 ] as const;
 type NavPath = (typeof Items)[number]['path'];
 
