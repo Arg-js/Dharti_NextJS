@@ -15,8 +15,8 @@ const Endorsed = async () => {
       }
     >
       <div className='flex flex-1 flex-col '>
-        <div className='my-5 flex gap-5'>
-          <div className='flex items-center justify-around justify-items-center gap-5 '>
+        <div className='my-5 flex justify-center gap-5'>
+          <div className='flex flex-col items-center justify-around justify-items-center gap-5 sm:flex-row'>
             {/* todo: auto width fit for autoscroll*/}
             {supportingPartnersGrp1?.map(({ id, image }) => (
               <div
@@ -33,7 +33,7 @@ const Endorsed = async () => {
             ))}
           </div>
         </div>
-        <div className='flex gap-2 md:gap-8'>
+        <div className='flex flex-col justify-center gap-5 sm:flex-row sm:gap-2 md:gap-8'>
           {supportingPartnersGrp2?.map(({ id, image }) => (
             <div
               className='relative aspect-[3/2] h-[68px] mix-blend-darken'

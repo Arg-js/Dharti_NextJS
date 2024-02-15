@@ -113,6 +113,8 @@ module.exports = {
       },
       gridTemplateColumns: {
         card: 'repeat(auto-fit,minmax(340px,1fr))',
+        card_sm: 'repeat(auto-fit,minmax(300px,1fr))',
+        card_base: 'repeat(auto-fit,minmax(240px,1fr))',
       },
       borderRadius: {
         lg: 'var(--radius)',

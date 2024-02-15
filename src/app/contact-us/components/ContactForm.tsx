@@ -1,12 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { sendContactUsMessage } from '../contact-us-service-api';
 import { InputField } from './InputField';
 import { useToast } from '@/components/ui/use-toast';
+import { Dialog } from './Modal';
 
 export const initialFormDetails = {
   first_name: '',
@@ -102,18 +102,19 @@ const ContactForm = () => {
               }));
             }}
           />
-          <p className='text-base font-normal text-gray-500'>
-            You agree to our
-          </p>
-          <Link
-            href='https://github.com/AsheshRanaGurung'
-            className='text-base font-normal text-gray-500 underline'
-          >
-            friendly policy.
-          </Link>
+          <div className='gap-1 md:flex'>
+            <p className='text-base font-normal text-gray-500'>
+              You agree to our
+            </p>
+            <Dialog />
+          </div>
         </div>
         <div>
-          <Button type='submit' className=' w-full py-6 text-white'>
+          <Button
+            type='submit'
+            disabled={!formDetails.policy_status}
+            className=' w-full py-6 text-white'
+          >
             Send message
           </Button>
         </div>
