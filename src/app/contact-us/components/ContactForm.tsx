@@ -20,6 +20,16 @@ export const initialFormDetails = {
 const ContactForm = () => {
   const { toast } = useToast();
   const [formDetails, setFormDetails] = useState(initialFormDetails);
+  const [isClicked, setIsClicked] = useState(false);
+
+  // Reusable validation function
+  const validateField = (fieldName: string, value: string) => {
+    // once the button is clicked and there are empty fields
+    // empty fields: defaultValue = fieldValue
+    return isClicked && !value
+      ? `Please enter your ${fieldName.replace('_', ' ')}`
+      : '';
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,11 +40,15 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsClicked(true);
     const msg = await sendContactUsMessage(formDetails);
-    setFormDetails(initialFormDetails);
+    // when there is a truthy value of a message
+    // ie. data is successfully posted
+    msg && setIsClicked(false);
+    msg && setFormDetails(initialFormDetails);
     toast({
-      title: msg,
-      variant: 'success',
+      title: msg ?? 'Please fill your form correctly!',
+      variant: msg ? 'success' : 'destructive',
     });
   };
 
@@ -55,6 +69,7 @@ const ContactForm = () => {
               value={formDetails.first_name}
               label='First name'
               placeholder='First name'
+              error={validateField('first_name', formDetails.first_name)}
               onChange={handleChange}
             />
           </div>
@@ -64,6 +79,7 @@ const ContactForm = () => {
               value={formDetails.last_name}
               label='Last name'
               placeholder='Last name'
+              error={validateField('last_name', formDetails.last_name)}
               onChange={handleChange}
             />
           </div>
@@ -72,7 +88,9 @@ const ContactForm = () => {
           name='email'
           value={formDetails.email}
           label='Email'
+          type='email'
           placeholder='you@company.com'
+          error={validateField('email', formDetails.email)}
           onChange={handleChange}
         />
         <InputField
@@ -80,6 +98,7 @@ const ContactForm = () => {
           value={formDetails.phone}
           label='Phone number'
           placeholder='+1 (555) 000-0000'
+          error={validateField('phone_number', formDetails.phone)}
           onChange={handleChange}
         />
         <div className='md:mb-0'>
