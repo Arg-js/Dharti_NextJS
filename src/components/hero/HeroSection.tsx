@@ -6,11 +6,14 @@ type Hero = 'title' | 'image';
 const HeroSection = ({ title, image }: Record<Hero, string>) => {
   return (
     <div className='relative w-full '>
-      <Image
-        src={image}
-        alt='background for about in hero section'
-        className='h-28 w-full object-cover brightness-[30%] md:h-[232px]'
-      />
+      <div className='relative h-28 w-full md:h-[232px]'>
+        <Image
+          src={image}
+          alt='background for about in hero section'
+          fill
+          className='object-cover brightness-[30%] '
+        />
+      </div>
       <div className='absolute top-0 flex h-full w-full items-center justify-center'>
         <div className=' flex flex-col items-center justify-center'>
           <p className='pb-[6px] text-[32px] font-bold text-white'>{title}</p>

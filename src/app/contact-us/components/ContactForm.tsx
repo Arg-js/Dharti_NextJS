@@ -104,6 +104,7 @@ const ContactForm = () => {
         <div className='md:mb-0'>
           <p className='py-2 text-sm font-medium'>Message</p>
           <Textarea
+            aria-label='Message'
             name='message'
             value={formDetails.message}
             className='mb-2 h-32'
@@ -112,6 +113,7 @@ const ContactForm = () => {
         </div>
         <div className='flex space-x-1 '>
           <Checkbox
+            aria-label='Policy status'
             name='policy_status'
             checked={!!formDetails.policy_status}
             onCheckedChange={(val) => {

@@ -6,12 +6,12 @@
   display: inline-block;
   width: 16px; /* Width of image */
   height: 16px; /* Height of image */
-  background-image: url('../../assets/svg/plus.svg'); /* Path to image */
+  background-image: url('/svg/plus.svg'); /* Path to image */
   background-size: cover;
   margin-left: 8px;
   padding-right: 15px;
 }
 
 .accordion-trigger[data-state='open']::after {
-  background-image: url('../../assets/svg/minus.svg'); /* Path to opened state image */
+  background-image: url('/svg/minus.svg'); /* Path to opened state image */
 }

@@ -1,20 +1,17 @@
-import dhartiLogoIcon from './dhartiLogo.svg';
-import heroSectionAboutBg from './heroSectionAboutBg.svg';
-import heroSectionBlogBg from './heroSectionBlogBg.svg';
-import heroSectionTractorBg from './Tractor.svg';
-import starIcon from './star.svg';
-import contactImage from './Contact.svg';
-import financeImage from './finance.svg';
-import financeService1Image from './financeService1.svg';
-import financeService2Image from './financeService2.svg';
-import financeService3Image from './financeService3.svg';
-import tickIcon from './tick.svg';
-import Xlogo from './Xlogo.svg';
-import githubLogo from './githubLogo.svg';
-import facebookLogo from './facebookLogo.svg';
-import instaLogo from './instaLogo.svg';
-import minusLogo from './minus.svg';
-import plusLogo from './plus.svg';
+'use client';
+const dhartiLogoIcon = '/svg/dhartiLogo.svg';
+const heroSectionAboutBg = '/svg/heroSectionAboutBg.svg';
+const heroSectionBlogBg = '/svg/heroSectionBlogBg.svg';
+const heroSectionTractorBg = '/svg/Tractor.svg';
+const starIcon = '/svg/star.svg';
+const contactImage = '/svg/Contact.svg';
+const financeImage = '/svg/finance.svg';
+const financeService1Image = '/svg/financeService1.svg';
+const financeService2Image = '/svg/financeService2.svg';
+const financeService3Image = '/svg/financeService3.svg';
+const tickIcon = '/svg/tick.svg';
+const minusLogo = '/svg/minus.svg';
+const plusLogo = '/svg/plus.svg';
 
 export {
   dhartiLogoIcon,
@@ -26,10 +23,7 @@ export {
   heroSectionBlogBg,
   heroSectionTractorBg,
   /* HeroSection image ends */
-  instaLogo,
-  facebookLogo,
-  githubLogo,
-  Xlogo,
+
   /* Accordion icon */
   minusLogo,
   plusLogo,
@@ -43,3 +37,10 @@ export {
   /* About us list icon */
   financeImage,
 };
+
+import Xlogo from './Xlogo.svg';
+import GithubLogo from './githubLogo.svg';
+import FacebookLogo from './facebookLogo.svg';
+import InstaLogo from './instaLogo.svg';
+
+export { InstaLogo, FacebookLogo, GithubLogo, Xlogo };
