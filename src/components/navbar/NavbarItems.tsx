@@ -19,14 +19,17 @@ const NavbarItems = () => {
 
   return Items.map(({ name, path }) => {
     return (
-      <div
-        key={name}
-        className={`hover:text-primary_500 m-3 font-semibold ${
-          isActive(path) ? 'text-primary' : 'text-fd_gray-600'
-        } `}
-      >
-        <Link href={path}>{name}</Link>
-      </div>
+      <li key={name}>
+        {/* todo: use 700 to fix accessibility */}
+        <Link
+          className={`m-3 font-semibold hover:text-primary-400 ${
+            isActive(path) ? 'text-primary-400' : 'text-fd_gray-600'
+          } `}
+          href={path}
+        >
+          {name}
+        </Link>
+      </li>
     );
   });
 };

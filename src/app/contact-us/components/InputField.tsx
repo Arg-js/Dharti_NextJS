@@ -8,16 +8,20 @@ export const InputField = (
     value: string;
     label: string;
     placeholder: string;
+    error: string;
     onChange: ChangeEventHandler<HTMLInputElement>;
   } & InputProps
 ) => {
-  const { name, value, label, placeholder, onChange, ...rest } = props;
+  const { name, value, label, placeholder, error, onChange, ...rest } = props;
 
   return (
     <div>
-      <label htmlFor={name} className='pb-2 text-sm font-medium'>
-        {label}
-      </label>
+      <div className='flex'>
+        <label htmlFor={name} className='pb-2 text-sm font-medium'>
+          {label}
+        </label>
+        <p className='text-red-600'>*</p>
+      </div>
       <Input
         className='w-full'
         name={name}
@@ -26,11 +30,11 @@ export const InputField = (
         onChange={onChange}
         {...rest}
       />
-      {/* {error && (
-        <label htmlFor={name} className='pb-2 text-sm font-medium'>
-          {label}
+      {error && (
+        <label htmlFor={name} className='pb-2 text-sm font-medium text-red-600'>
+          {error}
         </label>
-      )} */}
+      )}
     </div>
   );
 };

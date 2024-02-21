@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { instaLogo, facebookLogo, githubLogo, Xlogo } from '@/assets/svg';
 import { getFooterDetails } from './footer-service-api';
 import { getComma } from './utils';
+import './index.css';
+import { socialMedia } from './footer-social-media';
+import { cn } from '@/lib/utils';
 
 const listText = 'font-medium text-gray-500 dark:text-gray-400';
+const footerHeader = 'text-primary-700 text-base font-semibold';
 const quickLinks = [
   {
     title: 'Homepage',
@@ -25,12 +28,6 @@ const quickLinks = [
   },
 ];
 // todoBE: ask BE to provide the data
-const socialMedia = [
-  { id: 'social_instagram', logo: instaLogo },
-  { id: 'social_facebook', logo: facebookLogo },
-  { id: 'social_twitter', logo: Xlogo },
-  { id: 'social_youtube', logo: githubLogo },
-];
 // const footer = {
 //   quickLinks: ['homepage', 'about', 'loan solutions', 'blogs'],
 //   getInTouch: {
@@ -67,9 +64,7 @@ export const Footer = async () => {
             </h2>
           </div>
           <div>
-            <h2 className='text-base font-semibold  text-primary '>
-              Quick Links
-            </h2>
+            <h2 className={cn(footerHeader)}>Quick Links</h2>
             <ul className={listText}>
               {quickLinks.map((route) => {
                 return (
@@ -86,9 +81,7 @@ export const Footer = async () => {
           </div>
 
           <div className='text-center md:text-start'>
-            <h2 className='text-base font-semibold  text-primary'>
-              Get in Touch
-            </h2>
+            <h2 className={cn(footerHeader)}>Get in Touch</h2>
 
             <ul className={listText}>
               <li className='my-6'>
@@ -113,21 +106,12 @@ export const Footer = async () => {
             </ul>
           </div>
           <div>
-            <h2 className='mb-4 text-base  font-semibold text-primary'>
-              Social media
-            </h2>
+            <h2 className={(cn(footerHeader), 'mb-4')}>Social media</h2>
             <div className='flex gap-3 font-medium text-black dark:text-gray-400'>
-              {socialMediaWithLinks.map(({ logo, id, link }) => {
+              {socialMediaWithLinks.map(({ Logo, id, link }) => {
                 return (
-                  <Link href={`https://www.${link}/`} key={id}>
-                    <Image
-                      src={logo}
-                      alt={id}
-                      height={28}
-                      width={28}
-                      key={id}
-                      className='cursor-pointer'
-                    />
+                  <Link aria-label={id} href={`https://www.${link}/`} key={id}>
+                    <Logo className='group' />
                   </Link>
                 );
               })}
@@ -136,7 +120,7 @@ export const Footer = async () => {
         </div>
         <hr />
         <div className='bg-muted px-4 py-6 md:flex md:items-center md:justify-center dark:bg-gray-700'>
-          <span className='text-sm font-normal text-gray_500 sm:text-center dark:text-gray-300'>
+          <span className='text-sm font-normal text-gray-600 sm:text-center dark:text-gray-300'>
             © Copyright {new Date().getFullYear()} . All Rights Reserved by
             Dharti
           </span>

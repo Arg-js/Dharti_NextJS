@@ -1,5 +1,5 @@
 .list::before {
-  content: url('../../../../assets/svg/tick.svg');
+  content: url('/svg/tick.svg');
   display: inline-block;
   height: 32px;
   width: 32px;

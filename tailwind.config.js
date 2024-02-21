@@ -23,6 +23,7 @@ module.exports = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        // white: 'hsl(var(--white))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -30,6 +31,8 @@ module.exports = {
           400: 'hsl(var(--primary-400))',
           500: 'hsl(var(--primary-500))',
           600: 'hsl(var(--primary-600))',
+          650: 'hsl(var(--primary-650))',
+          700: 'hsl(var(--primary-700))',
         },
         primary_background: {
           DEFAULT: 'hsl(var(--primary_background))',
@@ -71,6 +74,9 @@ module.exports = {
         },
         gray_400: {
           DEFAULT: 'hsl(var(--gray-400))',
+        },
+        gray_450: {
+          DEFAULT: 'hsl(var(--gray-450))',
         },
         gray_500: {
           DEFAULT: 'hsl(var(--gray-500))',
