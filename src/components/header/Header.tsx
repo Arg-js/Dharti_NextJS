@@ -24,7 +24,7 @@ export const Header = () => {
             href={`/loan-solutions`}
             className='flex justify-center md:justify-start'
           >
-            <Button className='button-hover mt-10 h-auto rounded-xl px-8 py-5 shadow-primary_background_200 hover:bg-primary'>
+            <Button className='button-hover mt-10 h-auto rounded-xl bg-primary-650 px-8 py-5 shadow-primary_background_200 hover:bg-primary'>
               Explore our Solution
             </Button>
           </Link>
