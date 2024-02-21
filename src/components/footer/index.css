@@ -1,0 +1,11 @@
+.group:hover {
+  fill: #5a8a3a;
+}
+
+.group:hover path {
+  fill: white;
+}
+
+.group:hover circle {
+  stroke: #5a8a3a;
+}
