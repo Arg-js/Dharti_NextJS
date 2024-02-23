@@ -1,13 +1,13 @@
 import React from 'react';
-import { IPurchaseBillFinance } from '../../page';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { ILoanSolution } from '../../loan-solution-service-api';
 
 const Financing = ({
   financeService,
   variant,
 }: {
-  financeService: IPurchaseBillFinance;
+  financeService: ILoanSolution;
   variant?: 'REVERSE' | 'DEFAULT';
 }) => {
   return (
@@ -22,7 +22,7 @@ const Financing = ({
         {financeService.title}
       </p>
       <p className='py-3 text-center text-base font-normal text-gray_450 lg:mb-10 xl:mb-20'>
-        {financeService.subTitle}
+        {financeService.description}
       </p>
       {/* ends */}
       <div
@@ -52,7 +52,7 @@ const Financing = ({
 
         <div>
           <ul className='mx-3 mt-9 lg:mx-0'>
-            {financeService.services.map(({ id, title, desc, logo }) => {
+            {financeService.loans.map(({ id, title, description, image }) => {
               return (
                 <li key={id} className='mb-12 flex gap-4'>
                   <div className='flex aspect-square h-8 justify-center rounded-xl bg-primary md:h-12'>
@@ -60,13 +60,13 @@ const Financing = ({
                       height={'25'}
                       width={'25'}
                       alt='finance services logo'
-                      src={logo}
+                      src={image}
                     />
                   </div>
                   <div>
                     {/* todo: which heading to give where */}
                     <h5 className='bold20 mb-1'>{title}</h5>
-                    <p className='normal14 text-gray-500'>{desc}</p>
+                    <p className='normal14 text-gray-500'>{description}</p>
                   </div>
                 </li>
               );
